@@ -118,3 +118,120 @@ input:focus, textarea:focus, select:focus {
 }
 
 .muted { color: var(--ink-soft); font-size: var(--text-sm); }
+
+/* ---- app chrome ---- */
+
+.app-nav {
+  display: flex;
+  align-items: baseline;
+  gap: var(--sp-5);
+  padding: var(--sp-4) var(--sp-6);
+  border-bottom: 1px solid var(--line);
+  background: var(--paper-raised);
+}
+.app-nav a { text-decoration: none; color: var(--ink-soft); font-size: var(--text-sm); }
+.app-nav a:hover { color: var(--accent); }
+.app-nav .wordmark {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  color: var(--ink);
+  margin-right: var(--sp-4);
+}
+
+.app-main { max-width: 860px; margin: 0 auto; padding: var(--sp-6); }
+
+.page-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  margin-bottom: var(--sp-5);
+  flex-wrap: wrap;
+}
+.page-head h1 { margin: 0; }
+.head-actions { display: flex; gap: var(--sp-2); }
+.rename-row { display: flex; gap: var(--sp-2); align-items: center; }
+
+/* ---- decks grid ---- */
+
+.deck-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--sp-4);
+}
+.deck-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--sp-2);
+  padding: var(--sp-4);
+  text-align: left;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+.deck-tile-name { font-family: var(--font-heading); font-size: var(--text-lg); }
+
+.tag {
+  font-size: var(--text-xs);
+  font-family: var(--font-ui);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-radius: 999px;
+  padding: 2px 10px;
+}
+.tag-quiet { color: var(--ink-soft); background: var(--paper-inset); }
+
+/* ---- card list rows ---- */
+
+.row-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--sp-2); }
+.row { display: flex; gap: var(--sp-2); align-items: stretch; }
+.row-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  text-align: left;
+  overflow: hidden;
+}
+.row-summary {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: var(--text-sm);
+}
+
+/* ---- forms & modal ---- */
+
+.field { display: flex; flex-direction: column; gap: var(--sp-1); margin-bottom: var(--sp-4); }
+.field > span:first-child { font-size: var(--text-sm); font-weight: 600; }
+.actions { display: flex; justify-content: flex-end; gap: var(--sp-2); }
+.form-error { color: var(--status-due); font-size: var(--text-sm); }
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgb(43 38 32 / 0.45);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: var(--sp-7) var(--sp-4);
+  z-index: 10;
+}
+.modal { width: min(560px, 100%); max-height: 80vh; overflow-y: auto; }
+.modal-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--sp-4); }
+.modal-head h3 { margin: 0; }
+
+/* ---- card faces (review + previews) ---- */
+
+.card-face-text { font-size: var(--text-lg); white-space: pre-wrap; }
+.cloze-blank {
+  color: var(--accent);
+  font-weight: 600;
+  border-bottom: 2px solid var(--accent);
+  padding: 0 var(--sp-2);
+}
+.cloze-reveal { color: var(--accent); font-weight: 600; }
+.cloze-other { color: var(--ink-soft); }
