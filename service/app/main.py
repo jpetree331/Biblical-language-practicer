@@ -9,7 +9,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 
 from . import db
-from .routers import cards, decks
+from .routers import cards, decks, review
 
 VERSION = "0.1.0"
 
@@ -23,6 +23,7 @@ async def lifespan(app: FastAPI):
 app = FastAPI(title="Scriptorium", version=VERSION, lifespan=lifespan)
 app.include_router(decks.router)
 app.include_router(cards.router)
+app.include_router(review.router)
 
 
 @app.get("/api/health")

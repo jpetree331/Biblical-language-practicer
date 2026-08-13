@@ -2,6 +2,7 @@ import { useHashRoute } from './hooks/useHashRoute'
 import { AboutPage } from './pages/AboutPage'
 import { DeckPage } from './pages/DeckPage'
 import { DecksPage } from './pages/DecksPage'
+import { ReviewPage } from './pages/ReviewPage'
 
 export default function App() {
   const route = useHashRoute()
@@ -18,6 +19,7 @@ export default function App() {
       <main className="app-main">
         {route.page === 'decks' && <DecksPage />}
         {route.page === 'deck' && <DeckPage key={route.id} deckId={route.id} />}
+        {route.page === 'review' && <ReviewPage key={route.id} deckId={route.id} />}
         {route.page === 'about' && <AboutPage />}
       </main>
     </>

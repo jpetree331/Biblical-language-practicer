@@ -155,6 +155,11 @@ def bootstrap() -> None:
     conn = get_conn()
     try:
         conn.executescript(SCHEMA)
+        # additive migrations — safe to re-run
+        try:
+            conn.execute("alter table card_state add column step integer")
+        except sqlite3.OperationalError:
+            pass  # column already exists
         conn.commit()
     finally:
         conn.close()

@@ -5,9 +5,12 @@ import { CardEditor } from '../components/CardEditor'
 import { cardType } from '../config/cardTypes'
 import { navigate } from '../hooks/useHashRoute'
 
+type Stats = { due: number; new: number; retention: number | null }
+
 export function DeckPage({ deckId }: { deckId: string }) {
   const [deck, setDeck] = useState<Deck | null>(null)
   const [cards, setCards] = useState<Card[]>([])
+  const [stats, setStats] = useState<Stats | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [editing, setEditing] = useState<Card | null>(null)
   const [adding, setAdding] = useState(false)
@@ -17,8 +20,15 @@ export function DeckPage({ deckId }: { deckId: string }) {
   const load = useCallback(() => {
     api.get<Deck>(`/api/decks/${deckId}`).then(setDeck).catch((e) => setError(String(e)))
     api.get<Card[]>(`/api/decks/${deckId}/cards`).then(setCards).catch((e) => setError(String(e)))
+    api.get<Stats>(`/api/review/stats?deck_id=${deckId}`).then(setStats).catch(() => setStats(null))
   }, [deckId])
   useEffect(load, [load])
+
+  const setNewPerDay = async (value: number) => {
+    if (!deck) return
+    await api.patch(`/api/decks/${deckId}`, { config: { ...deck.config, newPerDay: value } })
+    load()
+  }
 
   const saveCard = async (typeKey: string, payload: Record<string, unknown>) => {
     if (editing) {
@@ -80,11 +90,41 @@ export function DeckPage({ deckId }: { deckId: string }) {
             Rename
           </button>
           <button onClick={deleteDeck}>Delete deck</button>
-          <button className="primary" onClick={() => setAdding(true)}>
-            Add card
+          <button onClick={() => setAdding(true)}>Add card</button>
+          <button className="primary" onClick={() => navigate(`/review/${deckId}`)}>
+            Review
           </button>
         </span>
       </div>
+
+      {stats && (
+        <div className="stat-row">
+          <span className="stat">
+            <strong className={stats.due > 0 ? 'stat-due' : ''}>{stats.due}</strong> due
+          </span>
+          <span className="stat">
+            <strong>{stats.new}</strong> new
+          </span>
+          <span className="stat">
+            retention{' '}
+            <strong>{stats.retention === null ? '—' : `${Math.round(stats.retention * 100)}%`}</strong>
+          </span>
+          <span className="stat muted">
+            new/day{' '}
+            <input
+              className="newperday"
+              type="number"
+              min={0}
+              max={100}
+              defaultValue={Number(deck.config.newPerDay ?? 10)}
+              onBlur={(e) => {
+                const v = Math.max(0, Math.min(100, Number(e.target.value) || 0))
+                if (v !== Number(deck.config.newPerDay ?? 10)) void setNewPerDay(v)
+              }}
+            />
+          </span>
+        </div>
+      )}
 
       {cards.length === 0 ? (
         <p className="muted">No cards yet.</p>
