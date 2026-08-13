@@ -1,0 +1,120 @@
+/* Scriptorium design tokens — hand-written CSS, no Tailwind, no libraries.
+   Warm and bookish: paper ground, ink text, oxblood accent.
+   Green/amber/red are RESERVED for mastery/status — never decorative. */
+
+:root {
+  /* color */
+  --paper: #f7f2e9;
+  --paper-raised: #fffdf8;
+  --paper-inset: #efe7d8;
+  --ink: #2b2620;
+  --ink-soft: #6b6156;
+  --ink-faint: #a1968a;
+  --line: #d9cfbe;
+  --accent: #8c3b2e;        /* oxblood — links, primary actions */
+  --accent-soft: #f0ddd8;
+  --gold-leaf: #b08d3f;     /* decorative flourish only */
+
+  /* mastery / status — the only green, amber, red in the app */
+  --status-good: #4a7c46;
+  --status-warm: #b07f24;
+  --status-due: #a33b2e;
+
+  /* type */
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-ui: 'Libre Franklin', 'Segoe UI', sans-serif;
+  --font-greek: 'Noto Serif', 'Palatino Linotype', Georgia, serif;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.6rem;
+  --text-2xl: 2.1rem;
+  --text-greek: 1.35rem;    /* Greek runs larger for diacritic legibility */
+
+  /* space */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+
+  /* shape */
+  --radius: 6px;
+  --radius-lg: 10px;
+  --shadow: 0 1px 3px rgb(43 38 32 / 0.12), 0 4px 14px rgb(43 38 32 / 0.06);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-ui);
+  font-size: var(--text-md);
+  line-height: 1.55;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.2;
+  margin: 0 0 var(--sp-4);
+}
+h1 { font-size: var(--text-2xl); }
+h2 { font-size: var(--text-xl); }
+h3 { font-size: var(--text-lg); }
+
+a { color: var(--accent); }
+
+.greek {
+  font-family: var(--font-greek);
+  font-size: var(--text-greek);
+  line-height: 1.7;
+}
+
+button {
+  font-family: var(--font-ui);
+  font-size: var(--text-sm);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper-raised);
+  color: var(--ink);
+  padding: var(--sp-2) var(--sp-4);
+  cursor: pointer;
+}
+button:hover { border-color: var(--ink-faint); }
+button.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--paper-raised);
+}
+button:disabled { opacity: 0.5; cursor: default; }
+
+input, textarea, select {
+  font-family: var(--font-ui);
+  font-size: var(--text-md);
+  color: var(--ink);
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: var(--sp-2) var(--sp-3);
+}
+input:focus, textarea:focus, select:focus {
+  outline: 2px solid var(--accent-soft);
+  border-color: var(--accent);
+}
+
+.card-surface {
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: var(--sp-5);
+}
+
+.muted { color: var(--ink-soft); font-size: var(--text-sm); }

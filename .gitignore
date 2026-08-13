@@ -1,0 +1,21 @@
+# dependencies
+web/node_modules/
+service/.venv/
+
+# local data — SQLite DB, downloaded corpora (never committed)
+data/
+backups/
+
+# env
+.env
+
+# build output
+web/dist/
+
+# editor / OS noise
+.vscode/
+Thumbs.db
+
+# python
+__pycache__/
+*.pyc
