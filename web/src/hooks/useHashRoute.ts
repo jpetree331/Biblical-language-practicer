@@ -11,6 +11,7 @@ export type Route =
   | { page: 'corpus' }
   | { page: 'lessons' }
   | { page: 'lesson'; id: string }
+  | { page: 'exercise'; id: string }
   | { page: 'about' }
 
 export function parseHash(hash: string): Route {
@@ -21,6 +22,7 @@ export function parseHash(hash: string): Route {
   if (parts[0] === 'corpus') return { page: 'corpus' }
   if (parts[0] === 'lessons') return { page: 'lessons' }
   if (parts[0] === 'lesson' && parts[1]) return { page: 'lesson', id: parts[1] }
+  if (parts[0] === 'exercise' && parts[1]) return { page: 'exercise', id: parts[1] }
   if (parts[0] === 'about') return { page: 'about' }
   return { page: 'decks' }
 }

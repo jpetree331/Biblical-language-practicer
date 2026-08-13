@@ -45,10 +45,20 @@ after a break is normal; it clears faster than it looks.
 
 ## The Greek curriculum
 
-Phases 2–3 grow a Biblical Greek tutor inside this engine: the MorphGNT SBLGNT
-corpus, generated vocab/parsing decks with every card cited back to real NT
-tokens, Machen-sequenced lessons, translation exercises with an AI checker
-that must cite the corpus to be believed. See `scriptorium_master_plan.md`.
+The Biblical Greek tutor lives in **Lessons** (top nav): 33 Machen-sequenced
+lessons, each running read → drill → translate → compose. Every generated
+card and every AI correction cites real MorphGNT tokens and is programmatically
+validated before you ever see it — anything that fails is withheld visibly,
+never shown silently. The one thing the app needs from you before trusting
+the curriculum: review `data\syllabus_map.greek.json` against Machen and flip
+each chapter's `"reviewed": true` (see `docs\reports\sprint-6.md`).
+
+Per-chapter commands as you progress (see RUNBOOK.md):
+
+```
+scripts\build-chapter.cmd greek N     # that chapter's vocab + parsing decks
+scripts\build-exercises.cmd greek N   # translation + composition passages
+```
 
 ## Corpus attribution
 

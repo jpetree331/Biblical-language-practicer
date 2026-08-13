@@ -31,13 +31,20 @@ type Lesson = {
   concepts: Concept[]
 }
 
+type ExerciseSummary = { id: string; kind: string; last_score: number | null; attempted: boolean }
+
 export function LessonPage({ lessonId }: { lessonId: string }) {
   const [lesson, setLesson] = useState<Lesson | null>(null)
+  const [exercises, setExercises] = useState<ExerciseSummary[]>([])
   const [error, setError] = useState<string | null>(null)
   const [readingOpen, setReadingOpen] = useState(false)
 
   const load = useCallback(() => {
     api.get<Lesson>(`/api/lessons/${lessonId}`).then(setLesson).catch((e) => setError(String(e)))
+    api
+      .get<ExerciseSummary[]>(`/api/exercises/by-lesson/${lessonId}`)
+      .then(setExercises)
+      .catch(() => setExercises([]))
   }, [lessonId])
   useEffect(load, [load])
 
@@ -115,7 +122,30 @@ export function LessonPage({ lessonId }: { lessonId: string }) {
             {(item.kind === 'translate' || item.kind === 'compose') && (
               <div>
                 <div className="item-kind">{item.kind === 'translate' ? 'Translate' : 'Compose'}</div>
-                <p className="muted">arrives with {item.kind === 'translate' ? 'Sprint 8' : 'Sprint 9'}</p>
+                {(() => {
+                  const wanted = item.kind === 'translate' ? 'translate_gk_en' : 'compose'
+                  const mine = exercises.filter((e) => e.kind === wanted)
+                  if (mine.length === 0)
+                    return (
+                      <p className="muted">
+                        No exercises yet — <code>scripts\build-exercises.cmd greek {lesson.seq}</code>
+                      </p>
+                    )
+                  return (
+                    <ul className="exercise-list">
+                      {mine.map((e, i) => (
+                        <li key={e.id}>
+                          <a href={`#/exercise/${e.id}`}>
+                            {item.kind === 'translate' ? 'Passage' : 'Prompt'} {i + 1}
+                          </a>{' '}
+                          {e.attempted && e.last_score != null && (
+                            <span className="muted">last: {Math.round(e.last_score * 100)}%</span>
+                          )}
+                        </li>
+                      ))}
+                    </ul>
+                  )
+                })()}
               </div>
             )}
           </li>

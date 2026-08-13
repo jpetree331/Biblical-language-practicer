@@ -3,6 +3,7 @@ import { AboutPage } from './pages/AboutPage'
 import { DeckPage } from './pages/DeckPage'
 import { DecksPage } from './pages/DecksPage'
 import { CorpusPage } from './pages/CorpusPage'
+import { ExercisePage } from './pages/ExercisePage'
 import { ImportPage } from './pages/ImportPage'
 import { LessonPage } from './pages/LessonPage'
 import { LessonsPage } from './pages/LessonsPage'
@@ -31,6 +32,7 @@ export default function App() {
         {route.page === 'corpus' && <CorpusPage />}
         {route.page === 'lessons' && <LessonsPage />}
         {route.page === 'lesson' && <LessonPage key={route.id} lessonId={route.id} />}
+        {route.page === 'exercise' && <ExercisePage key={route.id} exerciseId={route.id} />}
         {route.page === 'about' && <AboutPage />}
       </main>
     </>

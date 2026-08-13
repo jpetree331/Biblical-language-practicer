@@ -379,6 +379,37 @@ input:focus, textarea:focus, select:focus {
 .concept-fill.warm { background: var(--status-warm); }
 .concept-fill.good { background: var(--status-good); }
 
+/* ---- exercises: passage, checker feedback ---- */
+
+.passage { line-height: 2.1; }
+.token {
+  border: none;
+  background: none;
+  padding: 0 2px;
+  font: inherit;
+  color: inherit;
+  border-bottom: 1px dotted var(--ink-faint);
+  cursor: pointer;
+  margin-right: 4px;
+}
+.token:hover { color: var(--accent); }
+.token-active { color: var(--accent); border-bottom-color: var(--accent); }
+.token-info { margin-top: var(--sp-2); }
+.compose-preview {
+  background: var(--paper-inset);
+  border-radius: var(--radius);
+  padding: var(--sp-3);
+  min-height: 2.2em;
+  margin-bottom: var(--sp-3);
+}
+.exercise-list { list-style: none; margin: 0; padding: 0; display: flex; gap: var(--sp-4); }
+.note-list { list-style: none; margin: var(--sp-3) 0; padding: 0; display: flex; flex-direction: column; gap: var(--sp-2); }
+.note { padding: var(--sp-2) var(--sp-3); border-left: 3px solid var(--line); }
+.note-error { border-left-color: var(--status-due); }
+.note-nitpick { border-left-color: var(--status-warm); }
+.note-praise { border-left-color: var(--status-good); }
+.footnote { font-size: var(--text-xs); color: var(--ink-faint); }
+
 .linklike {
   border: none;
   background: none;
