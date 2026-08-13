@@ -52,4 +52,16 @@ that must cite the corpus to be believed. See `scriptorium_master_plan.md`.
 
 ## Corpus attribution
 
-*(placeholder — filled at MorphGNT ingest, Sprint 4)*
+The Greek New Testament corpus is **MorphGNT SBLGNT**
+(https://github.com/morphgnt/sblgnt):
+
+> Tauber, J. K., ed. (2017) *MorphGNT: SBLGNT Edition*. Version 6.12
+> [Data set]. DOI: 10.5281/zenodo.376200
+
+The SBLGNT text itself is subject to the
+[SBLGNT EULA](http://sblgnt.com/license/); the morphological parsing and
+lemmatization are licensed
+[CC-BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/). The corpus
+files are **not** committed to this repository — `scripts\ingest-morphgnt.cmd`
+clones them into `data\` (gitignored) and loads them into SQLite; the license
+text above is also recorded in the `corpora` table at ingest.

@@ -47,6 +47,23 @@ Create two basic tasks (Run whether user is logged on or not, At log on):
 
 Optionally a third running `backup.cmd` weekly.
 
+## Corpus ingest
+
+```
+scripts\ingest-morphgnt.cmd
+```
+
+Clones MorphGNT SBLGNT into `data\morphgnt-sblgnt` (first run only) and loads
+it into SQLite. Idempotent — re-running wipes and reloads the `sblgnt` corpus.
+
+## Dev-loop quirk (Windows)
+
+Vite's file watcher occasionally misses a change when several files are edited
+in quick succession; the dev server then serves a stale module even after the
+file is touched. If the UI seems to ignore fresh code, restart
+`scripts\start-web.cmd` — the production build (`npm run build`) is never
+affected.
+
 ## AI billing guardrail
 
 `ANTHROPIC_API_KEY` must never be set in `.env`, the `.cmd` wrappers, or the

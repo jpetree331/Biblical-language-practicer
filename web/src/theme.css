@@ -299,3 +299,24 @@ input:focus, textarea:focus, select:focus {
   margin-bottom: var(--sp-3);
 }
 .verse-hint { letter-spacing: 0.1em; }
+
+/* ---- corpus browser (dev tool) ---- */
+
+.corpus-controls { display: flex; gap: var(--sp-2); align-items: center; margin-bottom: var(--sp-4); }
+.corpus-table { border-collapse: collapse; width: 100%; font-size: var(--text-sm); }
+.corpus-table th {
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid var(--line);
+  padding: var(--sp-1) var(--sp-3) var(--sp-1) 0;
+}
+.corpus-table td { border-bottom: 1px solid var(--line); padding: var(--sp-1) var(--sp-3) var(--sp-1) 0; }
+.greek-inline { font-family: var(--font-greek); font-size: 1.1rem; }
+.linklike {
+  border: none;
+  background: none;
+  padding: 0;
+  color: var(--accent);
+  text-decoration: underline;
+  font: inherit;
+}
