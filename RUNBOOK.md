@@ -56,6 +56,20 @@ scripts\ingest-morphgnt.cmd
 Clones MorphGNT SBLGNT into `data\morphgnt-sblgnt` (first run only) and loads
 it into SQLite. Idempotent — re-running wipes and reloads the `sblgnt` corpus.
 
+## Greek curriculum scripts
+
+```
+scripts\ingest-morphgnt.cmd        # corpus into SQLite (idempotent)
+scripts\draft-syllabus.cmd         # auto-draft data\syllabus_map.greek.json from Machen
+scripts\load-syllabus.cmd          # validate + load the map into concepts/lessons
+scripts\build-chapter.cmd greek N  # generate a reviewed chapter's vocab+parsing decks
+scripts\generate.cmd ...           # ad-hoc generation batches (see the file header)
+```
+
+The map's chapters carry `"reviewed": false` until you check them against
+Machen and flip the flag; `build-chapter` refuses unreviewed chapters
+(`--force` overrides while you experiment).
+
 ## Dev-loop quirk (Windows)
 
 Vite's file watcher occasionally misses a change when several files are edited

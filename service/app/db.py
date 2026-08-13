@@ -126,6 +126,13 @@ create table if not exists submissions (
   submitted_at text not null default (datetime('now'))
 );
 
+create table if not exists source_texts (
+  ref text primary key,                -- e.g. 'machen:12'
+  title text not null,
+  body text not null,
+  source_is_pd integer not null default 0
+);
+
 create table if not exists gen_batches (
   id text primary key,
   spec text not null,

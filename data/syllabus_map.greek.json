@@ -1,0 +1,1657 @@
+{
+  "language": "greek",
+  "source": "machen-1923",
+  "source_is_pd": true,
+  "source_provenance": {
+    "work": "J. Gresham Machen, New Testament Greek for Beginners, Macmillan, 1923",
+    "pd_basis": "published in the USA in 1923; US copyright expired (PD since 2019)",
+    "text_url": "https://archive.org/download/newtestamentgree00mach/newtestamentgree00mach_djvu.txt",
+    "archive_item": "https://archive.org/details/newtestamentgree00mach"
+  },
+  "chapters": [
+    {
+      "n": 1,
+      "title": "The Alphabet",
+      "concepts": [
+        {
+          "id": "GK.ALPHABET",
+          "name": "The Greek alphabet: letters, names, and pronunciation"
+        },
+        {
+          "id": "GK.ALPHABET.VOWELS",
+          "name": "Vowels (short, long, close, open) and diphthongs"
+        },
+        {
+          "id": "GK.ALPHABET.BREATHING",
+          "name": "Rough and smooth breathings"
+        },
+        {
+          "id": "GK.ACCENT",
+          "name": "The three accents: acute, circumflex, grave (introduced, not yet used)"
+        },
+        {
+          "id": "GK.PUNCT",
+          "name": "Greek punctuation marks (comma, period, colon, question mark)"
+        }
+      ],
+      "vocab_lemmas": [],
+      "reading_ref": "machen:1",
+      "notes": "This lesson covers only the alphabet, vowels, diphthongs, breathings, accents, and punctuation marks; there is no vocabulary section, so generate no vocabulary-based exercises. Practice should focus on letter recognition/formation and pronunciation drills (e.g., reading syllables and short words aloud), not on morphology, syntax, or word meaning.",
+      "validation_notes": [],
+      "verifier_notes": [],
+      "reviewed": false
+    },
+    {
+      "n": 2,
+      "title": "Accent",
+      "concepts": [
+        {
+          "id": "GK.ACCENT",
+          "name": "Greek accent: acute, circumflex, grave; general rules of accent"
+        },
+        {
+          "id": "GK.ACCENT.VERB",
+          "name": "Rule of verb accent (recessive accent)"
+        },
+        {
+          "id": "GK.ACCENT.NOUN",
+          "name": "Rule of noun accent (persistent accent, as near as general rules allow)"
+        }
+      ],
+      "vocab_lemmas": [],
+      "reading_ref": "machen:2",
+      "notes": "Lesson 2 introduces no vocabulary; drills should focus purely on syllable division (ultima/penult/antepenult), vowel/diphthong quantity, and applying the six general accent rules plus the verb (recessive) and noun (persistent) accent rules to given unaccented forms — avoid testing meaning or translation here.",
+      "validation_notes": [],
+      "verifier_notes": [
+        "misses §10 preliminary definitions: ultima/penult/antepenult and syllable quantity (long vowel/diphthong = long; final -αι/-οι count short) — the prerequisite block for every accent rule"
+      ],
+      "reviewed": false
+    },
+    {
+      "n": 3,
+      "title": "Present Active Indicative",
+      "concepts": [
+        {
+          "id": "GK.PRES.ACT.IND",
+          "name": "Present Active Indicative"
+        },
+        {
+          "id": "GK.VERB.STEM",
+          "name": "Verb stem and personal endings"
+        }
+      ],
+      "vocab_lemmas": [
+        "βλέπω",
+        "γινώσκω",
+        "γράφω",
+        "διδάσκω",
+        "λαμβάνω",
+        "λέγω",
+        "λύω",
+        "ἔχω"
+      ],
+      "reading_ref": "machen:3",
+      "notes": "Practice should use only present active indicative forms of these eight -ω verbs (no compounds, no other tenses/moods); when drilling 2nd person, note that English 'you' is ambiguous between λύεις (sg.) and λύετε (pl.) unless archaic 'thou/ye' forms are used to disambiguate.",
+      "validation_notes": [],
+      "verifier_notes": [
+        "misses §21: present tense covers both 'I loose' and 'I am loosing' (continuous/progressive force) — an explicit teaching point, not a paradigm detail"
+      ],
+      "reviewed": false
+    },
+    {
+      "n": 4,
+      "title": "The Second Declension. Order of Words. Movable ν.",
+      "concepts": [
+        {
+          "id": "GK.DECL.2",
+          "name": "Second declension nouns (masculine -ος, neuter -ον)"
+        },
+        {
+          "id": "GK.ART",
+          "name": "Definite article (gender agreement, no indefinite article)"
+        },
+        {
+          "id": "GK.CASE.USES",
+          "name": "Uses of the cases: nominative subject, accusative object, genitive possession, dative indirect object, vocative direct address"
+        },
+        {
+          "id": "GK.WORDORDER",
+          "name": "Normal and variable order of words in a Greek sentence"
+        },
+        {
+          "id": "GK.MOVABLE.N",
+          "name": "Movable ν on third person plural verb forms"
+        },
+        {
+          "id": "GK.ACCENT",
+          "name": "Second-declension noun accent (circumflex in gen./dat. when ultima accented)"
+        }
+      ],
+      "vocab_lemmas": [
+        "ἀδελφός",
+        "ἄνθρωπος",
+        "ἀπόστολος",
+        "δοῦλος",
+        "δῶρον",
+        "θάνατος",
+        "καί",
+        "λόγος",
+        "νόμος",
+        "οἶκος",
+        "υἱός"
+      ],
+      "reading_ref": "machen:4",
+      "notes": "Practice only second-declension nouns (masc./fem. -ος, neut. -ον) paired with the third-person present active indicative verbs already known (γινώσκει, βλέπει, λέγει, γράφει, διδάσκει, λαμβάνει, λύει, ἔχει); vary subject-verb-object word order for emphasis, use movable ν before vowels or sentence-end with -ουσι(ν) forms, and avoid first/third declension nouns, adjectives, or other moods/tenses not yet introduced.",
+      "validation_notes": [
+        "ἱερόν NOT IN CORPUS (candidates: ἱεροπρεπής, ἱεροσυλέω, ἱερουργέω)"
+      ],
+      "verifier_notes": [
+        "vocab miss: ἱερόν, τό 'a temple' omitted (lesson §24 lists 12 items, map has 11)",
+        "misses §42 neuter rule: in all neuters of all declensions voc./acc. = nom. in both numbers, and neuter nom/voc/acc plural ends in short α"
+      ],
+      "reviewed": false
+    },
+    {
+      "n": 5,
+      "title": "The First Declension",
+      "concepts": [
+        {
+          "id": "GK.DECL.1",
+          "name": "First declension (α/η-stem feminine nouns)"
+        },
+        {
+          "id": "GK.ACCENT",
+          "name": "First-declension genitive plural accent exception (circumflex on ultima)"
+        }
+      ],
+      "vocab_lemmas": [
+        "ἀλήθεια",
+        "ζωή",
+        "βασιλεία",
+        "ἡμέρα",
+        "γραφή",
+        "καρδία",
+        "δόξα",
+        "παραβολή",
+        "εἰρήνη",
+        "φωνή",
+        "ἐκκλησία",
+        "ψυχή",
+        "ἐντολή",
+        "ὥρα"
+      ],
+      "reading_ref": "machen:5",
+      "notes": "Practice should drill first-declension feminine nouns (ὥρα/δόξα/γραφή/ἀλήθεια patterns) in all cases and numbers, paired only with present active indicative verbs already known (e.g. βλέπει, γινώσκει, λέγει, διδάσκει, γράφει, ἔχουσι); emphasize the genitive plural circumflex exception and the α vs η alternation in gen./dat. singular, and avoid introducing second/third declension or non-present verb forms.",
+      "validation_notes": [],
+      "verifier_notes": [
+        "misses §55: α of the nominative singular becomes η in gen./dat. sg. except after ε, ι, ρ — the rule that generates the δόξα vs. ὥρα split",
+        "misses §58: general first-declension accent rule (circumflex on accented ultima in gen./dat. of both numbers, acute elsewhere); map captured only the §51 gen.-pl. exception"
+      ],
+      "reviewed": false
+    },
+    {
+      "n": 6,
+      "title": "The Article; Adjectives of the First and Second Declension: Agreement, Attributive and Predicate Position, Substantive Use",
+      "concepts": [
+        {
+          "id": "GK.ART",
+          "name": "The article ὁ, ἡ, τό (declension and use)"
+        },
+        {
+          "id": "GK.ADJ",
+          "name": "First/second declension adjectives (-ος, -η/-α, -ον)"
+        },
+        {
+          "id": "GK.AGREEMENT",
+          "name": "Agreement of article and adjective with noun in gender, number, case"
+        },
+        {
+          "id": "GK.ADJ.POSITION",
+          "name": "Attributive vs. predicate position of the adjective"
+        },
+        {
+          "id": "GK.ADJ.SUBST",
+          "name": "Substantive use of the adjective"
+        }
+      ],
+      "vocab_lemmas": [
+        "ἀγαθός",
+        "ἄλλος",
+        "δίκαιος",
+        "ἐγείρω",
+        "ἔρημος",
+        "ὁ",
+        "ὁδός",
+        "κακός",
+        "καλός",
+        "κύριος",
+        "μικρός",
+        "νεκρός",
+        "πιστός",
+        "πρῶτος",
+        "ἔσχατος"
+      ],
+      "reading_ref": "machen:6",
+      "notes": "Practice should pair the article with -ος/-η/-ον adjectives (feminine in α after ρ/vowel, e.g. δικαία, μικρά) in both attributive patterns (ὁ ἀγαθὸς λόγος / ὁ λόγος ὁ ἀγαθός) and predicate patterns (ὁ λόγος ἀγαθός / ἀγαθὸς ὁ λόγος) with copula omitted; include substantive adjective use (οἱ ἀγαθοί, τὰ ἀγαθά). Keep verbs limited to present active indicative (e.g. ἐγείρω, βλέπω, λέγω, γράφω) and avoid introducing new declensions or tenses not yet covered.",
+      "validation_notes": [],
+      "verifier_notes": [
+        "misses §64: definition of proclitic and that ὁ, ἡ, οἱ, αἱ are proclitics — taught here, and Lesson 7 later cites it back",
+        "misses §60 note + §62: ἔρημος and ὁδός are feminine despite -ος; and adjective feminine takes long α (not η) after ρ or a vowel"
+      ],
+      "reviewed": false
+    },
+    {
+      "n": 7,
+      "title": "Masculine Nouns of the First Declension; Prepositions",
+      "concepts": [
+        {
+          "id": "GK.DECL.1",
+          "name": "First declension masculine nouns (προφήτης/μαθητής type)"
+        },
+        {
+          "id": "GK.PREP",
+          "name": "Prepositions and the cases they govern"
+        },
+        {
+          "id": "GK.CASE.USES",
+          "name": "Genitive of separation, dative of place, accusative of motion toward"
+        },
+        {
+          "id": "GK.ENCLIT",
+          "name": "Proclitics (ἐν, εἰς, ἐκ)"
+        }
+      ],
+      "vocab_lemmas": [
+        "ἄγγελος",
+        "ἄγω",
+        "ἀπό",
+        "βάλλω",
+        "διά",
+        "εἰς",
+        "ἐκ",
+        "ἐν",
+        "θεός",
+        "κόσμος",
+        "λίθος",
+        "μαθητής",
+        "μένω",
+        "μετά",
+        "οὐρανός",
+        "πέμπω",
+        "πρός",
+        "προφήτης",
+        "τέκνον",
+        "τόπος",
+        "φέρω"
+      ],
+      "reading_ref": "machen:7",
+      "notes": "Drill the masculine first-declension paradigm (προφήτης/μαθητής: -ης, -ου, -ῃ, -ην, -α sg.; -αι, -ῶν, -αις, -ας pl.) alongside prepositional phrases that fix each preposition to a single case (ἐν+dat, εἰς+acc, ἐκ/ἀπό+gen) or contrast dual-case ones (διά+gen 'through' vs +acc 'on account of'; μετά+gen 'with' vs +acc 'after'). Keep sentences to present-tense indicative verbs already known (ἄγω, βάλλω, μένω, πέμπω, φέρω) so the prepositional phrase is the sole new element being tested.",
+      "validation_notes": [],
+      "verifier_notes": [
+        "concept id GK.ENCLIT is used for proclitics; the lesson teaches proclitics (§84), enclitics are Lesson 8 — content right, id mislabeled",
+        "misses §85: prepositions with several cases change meaning by case (διά+gen. 'through' vs +acc. 'on account of'; μετά+gen. 'with' vs +acc. 'after') — the lesson's main preposition point beyond the generic case rule"
+      ],
+      "reviewed": false
+    },
+    {
+      "n": 8,
+      "title": "Enclitics; Personal Pronouns; Present Indicative of εἰμί",
+      "concepts": [
+        {
+          "id": "GK.ENCLIT",
+          "name": "Enclitics and their accent rules"
+        },
+        {
+          "id": "GK.PRON.PERS",
+          "name": "Personal pronouns (1st, 2nd, 3rd person declension and use)"
+        },
+        {
+          "id": "GK.PRES.ACT.IND",
+          "name": "Present indicative of εἰμί"
+        },
+        {
+          "id": "GK.WORDORDER",
+          "name": "Postpositive δέ (cannot stand first in its clause)"
+        },
+        {
+          "id": "GK.CASE.USES",
+          "name": "Genitive of the personal pronoun expressing possession"
+        }
+      ],
+      "vocab_lemmas": [
+        "αὐτός",
+        "ἐγώ",
+        "δέ",
+        "εἰμί",
+        "σύ"
+      ],
+      "reading_ref": "machen:8",
+      "notes": "Practice sentences should use unemphatic enclitic pronoun forms (μου, μοι, με, σου, σοι, σε) for possession and object, reserving emphatic forms (ἐμοῦ, ἐμοί, ἐμέ, σοῦ, σοί, σέ) for after prepositions or contrast; avoid nominative ἐγώ/σύ except when emphasis/contrast is intended, since verb endings alone mark person. Reinforce δέ as postpositive (never clause-initial) and drill enclitic accent placement (e.g. ἄνθρωπός μου, ὥρα ἐστίν) alongside αὐτός used only as 3rd-person object/oblique pronoun, not as nominative subject.",
+      "validation_notes": [],
+      "verifier_notes": [
+        "GK.CASE.USES 'genitive of personal pronoun expressing possession' is not supported anywhere in the supplied text (excerpt ends mid-§97); flag as unverified rather than confirmed-invented",
+        "GK.PRES.ACT.IND for εἰμί likewise appears only in the lesson title, not the supplied body — same truncation caveat",
+        "misses (assuming full lesson) the uses of αὐτός: intensive 'himself', ὁ αὐτός 'the same', attributive/predicate position"
+      ],
+      "reviewed": false
+    },
+    {
+      "n": 9,
+      "title": "Demonstrative Pronouns; Further Uses of αὐτός",
+      "concepts": [
+        {
+          "id": "GK.PRON.DEM",
+          "name": "Demonstrative pronouns οὗτος (this) and ἐκεῖνος (that): declension and predicate-position agreement with a noun"
+        },
+        {
+          "id": "GK.PRON.PERS",
+          "name": "Further uses of αὐτός: intensive ('-self', predicate position), 'same' (attributive position), and intensive use with pronouns/unexpressed subjects"
+        },
+        {
+          "id": "GK.WORDORDER",
+          "name": "Predicate vs. attributive position governing demonstratives, intensive αὐτός, and ὁ αὐτός ('same')"
+        }
+      ],
+      "vocab_lemmas": [
+        "ἀγάπη",
+        "ἁμαρτία",
+        "βαπτίζω",
+        "διδάσκαλος",
+        "ἐκεῖνος",
+        "ἐπαγγελία",
+        "εὐαγγέλιον",
+        "κρίνω",
+        "νῦν",
+        "οὗτος",
+        "οὕτω(ς)",
+        "πονηρός",
+        "πρόσωπον",
+        "χαρά"
+      ],
+      "reading_ref": "machen:9",
+      "notes": "Drill οὗτος/ἐκεῖνος only in predicate position with an articular noun (οὗτος ὁ λόγος / ὁ λόγος οὗτος), and contrast intensive αὐτός ('himself', predicate position) against ὁ αὐτός ('same', attributive position); avoid μι-verbs or new tenses beyond present active/indicative already introduced.",
+      "validation_notes": [
+        "οὕτως -> auto-corrected to οὕτω(ς)"
+      ],
+      "verifier_notes": [],
+      "reviewed": false
+    },
+    {
+      "n": 10,
+      "title": "Present Middle and Passive Indicative; ὑπό with the Genitive; the Dative of Means; Deponent Verbs; Compound Verbs; the Position of οὐ",
+      "concepts": [
+        {
+          "id": "GK.PRES.MID.IND",
+          "name": "Present Middle Indicative"
+        },
+        {
+          "id": "GK.PRES.PASS.IND",
+          "name": "Present Passive Indicative"
+        },
+        {
+          "id": "GK.CASE.USES",
+          "name": "ὑπό + genitive (agent), dative of means, and verbs taking genitive/dative objects"
+        },
+        {
+          "id": "GK.DEP",
+          "name": "Deponent verbs"
+        },
+        {
+          "id": "GK.COMPOUND",
+          "name": "Compound verbs (preposition + verb)"
+        },
+        {
+          "id": "GK.WORDORDER",
+          "name": "Position of the negative οὐ"
+        }
+      ],
+      "vocab_lemmas": [
+        "ἀλλά",
+        "ἀκούω",
+        "ἁμαρτωλός",
+        "ἀποκρίνομαι",
+        "ἄρχω",
+        "γίνομαι",
+        "διέρχομαι",
+        "εἰσέρχομαι",
+        "ἐξέρχομαι",
+        "ἔρχομαι",
+        "ὅτι",
+        "οὐ",
+        "πορεύομαι",
+        "σῴζω",
+        "ὑπό"
+      ],
+      "reading_ref": "machen:10",
+      "notes": "Practice should contrast present middle/passive forms (identical in the present, so treat ambiguous forms as passive) with active forms already known; drill ὑπό + genitive as personal agent versus the plain dative of means, and highlight deponents like ἔρχομαι-compounds (εἰσέρχομαι, ἐξέρχομαι, διέρχομαι, πορεύομαι, ἀποκρίνομαι) that are passive in form but active in meaning. Avoid introducing middle/passive forms outside the present tense, and keep οὐ placed immediately before the verb it negates.",
+      "validation_notes": [],
+      "verifier_notes": [],
+      "reviewed": false
+    },
+    {
+      "n": 11,
+      "title": "Imperfect Active Indicative; Imperfect Indicative of εἰμί; Accent of ἔστι(ν)",
+      "concepts": [
+        {
+          "id": "GK.IMPF.ACT.IND",
+          "name": "Imperfect active indicative"
+        },
+        {
+          "id": "GK.AUGMENT",
+          "name": "Augment (syllabic ἐ- and temporal vowel-lengthening)"
+        },
+        {
+          "id": "GK.AUGMENT.COMPOUND",
+          "name": "Augment placement in compound verbs"
+        },
+        {
+          "id": "GK.EIMI.IMPF",
+          "name": "Imperfect indicative of εἰμί"
+        },
+        {
+          "id": "GK.ACCENT",
+          "name": "Accent of ἔστι(ν) after οὐκ and certain words"
+        }
+      ],
+      "vocab_lemmas": [
+        "αἴρω",
+        "ἀναβαίνω",
+        "καταβαίνω",
+        "ἀποθνῄσκω",
+        "μέν",
+        "δέ",
+        "ἀποκτείνω",
+        "ἀποστέλλω",
+        "ἄρτος",
+        "ἐσθίω",
+        "κατά",
+        "παρά",
+        "παραλαμβάνω",
+        "σύν",
+        "συνάγω",
+        "τότε",
+        "οὐκέτι"
+      ],
+      "reading_ref": "machen:11",
+      "notes": "Drill only the imperfect active indicative of regular -ω verbs (including compounds with prepositional prefixes) and the imperfect of εἰμί; keep augment placement after the prefix and before the stem, with prefix-vowel elision, and don't let accent recede past the augment. Avoid the aorist or other tenses (not yet introduced) and use μέν...δέ pairs to contrast past vs. present habitual action, per the lesson's exercises.",
+      "validation_notes": [
+        "ἀποθνήσκω -> auto-corrected to ἀποθνῄσκω",
+        "βαίνω NOT IN CORPUS"
+      ],
+      "verifier_notes": [
+        "Missing vocab lemma βαίνω ('I go', §121 headword — the simple verb Machen lists alongside ἀναβαίνω/καταβαίνω)"
+      ],
+      "reviewed": false
+    },
+    {
+      "n": 12,
+      "title": "Imperfect Middle and Passive Indicative; Singular Verb with Neuter Plural Subject; Uses of καί and οὐδέ",
+      "concepts": [
+        {
+          "id": "GK.IMPF.MID.IND",
+          "name": "Imperfect middle indicative"
+        },
+        {
+          "id": "GK.IMPF.MP.IND",
+          "name": "Imperfect passive indicative (middle/passive identical in form)"
+        },
+        {
+          "id": "GK.NEUT.PL.VERB",
+          "name": "Neuter plural subject with singular verb"
+        },
+        {
+          "id": "GK.KAI.OUDE",
+          "name": "Uses of καί (also, even, καί...καί) and οὐδέ (nor, not even, οὐδέ...οὐδέ)"
+        },
+        {
+          "id": "GK.DEPONENT",
+          "name": "Deponent verbs retain deponency in the imperfect"
+        }
+      ],
+      "vocab_lemmas": [
+        "ἀπέρχομαι",
+        "βιβλίον",
+        "δαιμόνιον",
+        "δέχομαι",
+        "ἐκπορεύομαι",
+        "ἔργον",
+        "ἔτι",
+        "θάλασσα",
+        "καί",
+        "κατέρχομαι",
+        "οὐδέ",
+        "οὔπω",
+        "περί",
+        "πλοῖον",
+        "συνέρχομαι",
+        "ὑπέρ"
+      ],
+      "reading_ref": "machen:12",
+      "notes": "Drill imperfect middle/passive forms of λύω (ἐλυόμην, ἐλύου, ἐλύετο, ἐλυόμεθα, ἐλύεσθε, ἐλύοντο) alongside deponent compounds like ἀπέρχομαι/ἐκπορεύομαι/συνέρχομαι/κατέρχομαι/δέχομαι in the imperfect (e.g. ἠρχόμην); include some neuter plural subjects taking a singular verb (τὰ δαιμόνια ἐξέρχεται) but also show plural agreement as a valid alternative. Practice καί...καί and οὐδέ...οὐδέ correlative pairs plus the adverbial 'also/even' and 'not even' senses; avoid introducing aorist, future, or perfect forms in this lesson's practice.",
+      "validation_notes": [],
+      "verifier_notes": [],
+      "reviewed": false
+    },
+    {
+      "n": 13,
+      "title": "Future Active and Middle Indicative",
+      "concepts": [
+        {
+          "id": "GK.FUT.ACT.IND",
+          "name": "Future Active Indicative"
+        },
+        {
+          "id": "GK.FUT.MID.IND",
+          "name": "Future Middle Indicative"
+        },
+        {
+          "id": "GK.FUT.MUTE.STEM",
+          "name": "Future of Mute (Labial/Palatal/Lingual) Stems before σ"
+        },
+        {
+          "id": "GK.DEP.FUT",
+          "name": "Deponent Future (deponent in future but not present)"
+        },
+        {
+          "id": "GK.PRINPARTS",
+          "name": "Principal Parts of the Verb"
+        }
+      ],
+      "vocab_lemmas": [
+        "ἀναβλέπω",
+        "γίνομαι",
+        "γινώσκω",
+        "διδάσκω",
+        "διώκω",
+        "δοξάζω",
+        "ἔρχομαι",
+        "ἔχω",
+        "κηρύσσω",
+        "λαμβάνω",
+        "προσεύχομαι",
+        "τυφλός"
+      ],
+      "reading_ref": "machen:13",
+      "notes": "Drill future active/middle indicative of λύω-type verbs and consonant-stem futures (labial+σ→ψ, palatal+σ→ξ, lingual drops before σ) using §156 rules; present the deponent futures (γενήσομαι, γνώσομαι, λήμψομαι, ἐλεύσομαι, προσεύξομαι, βήσομαι) as memorized principal parts rather than derived forms. Avoid future passive forms entirely, since they are not introduced until a later lesson.",
+      "validation_notes": [
+        "βαίνω NOT IN CORPUS"
+      ],
+      "verifier_notes": [
+        "Missing vocab lemma βαίνω (vocabulary entry βήσομαι, dep. fut. of βαίνω, §150)"
+      ],
+      "reviewed": false
+    },
+    {
+      "n": 14,
+      "title": "First Aorist Active and Middle Indicative; Constructions with πιστεύω",
+      "concepts": [
+        {
+          "id": "GK.AOR.ACT.IND",
+          "name": "First Aorist Active Indicative"
+        },
+        {
+          "id": "GK.AOR.MID.IND",
+          "name": "First Aorist Middle Indicative"
+        },
+        {
+          "id": "GK.CASE.USES",
+          "name": "Constructions with πιστεύω (dative of person; εἰς + accusative for 'believe in/on')"
+        }
+      ],
+      "vocab_lemmas": [
+        "ἀπολύω",
+        "κηρύσσω",
+        "ἐπιστρέφω",
+        "ἑτοιμάζω",
+        "ἤδη",
+        "θαυμάζω",
+        "θεραπεύω",
+        "πείθω",
+        "πιστεύω",
+        "ὑποστρέφω"
+      ],
+      "reading_ref": "machen:14",
+      "notes": "Introduce only first aorist active and middle indicative (not second aorist, not aorist passive, which come in later lessons); contrast aorist ἔλυσα (simple past) against imperfect ἔλυον (continuous past). Drill πιστεύω with a dative object (I believe the man) versus πιστεύω εἰς + accusative (I believe in/on); avoid mixing in aorist passive or perfect forms.",
+      "validation_notes": [],
+      "verifier_notes": [],
+      "reviewed": false
+    },
+    {
+      "n": 15,
+      "title": "Second Aorist Active and Middle Indicative",
+      "concepts": [
+        {
+          "id": "GK.AOR2.ACT.IND",
+          "name": "Second aorist active indicative"
+        },
+        {
+          "id": "GK.AOR2.MID.IND",
+          "name": "Second aorist middle indicative"
+        }
+      ],
+      "vocab_lemmas": [
+        "γάρ",
+        "βάλλω",
+        "γίνομαι",
+        "ὁράω",
+        "λέγω",
+        "λαμβάνω",
+        "ἄγω",
+        "ἔρχομαι",
+        "φέρω",
+        "λείπω",
+        "πίπτω",
+        "προσφέρω"
+      ],
+      "reading_ref": "machen:15",
+      "notes": "Drill second aorist active/middle indicative forms only for verbs whose second aorist stem is already given in the vocabulary (ἔβαλον, ἐγενόμην, εἶδον, εἶπον, ἔλαβον, ἤγαγον, ἦλθον, ἔλιπον, ἔπεσον); avoid generating aorist passive forms (not yet taught) and avoid confusing second aorist with imperfect by contrasting stem differences (e.g. ἐλίπομεν vs ἐλείπομεν). Treat ἐγενόμην as deponent (middle form, active sense) and note προσφέρω governs accusative of thing + dative of person.",
+      "validation_notes": [],
+      "verifier_notes": [],
+      "reviewed": false
+    },
+    {
+      "n": 16,
+      "title": "Aorist Passive Indicative. Future Passive Indicative",
+      "concepts": [
+        {
+          "id": "GK.AOR.PASS.IND",
+          "name": "Aorist passive indicative"
+        },
+        {
+          "id": "GK.FUT.PASS.IND",
+          "name": "Future passive indicative"
+        },
+        {
+          "id": "GK.AOR2.PASS.IND",
+          "name": "Second aorist passive indicative"
+        },
+        {
+          "id": "GK.DEPONENT.PASS",
+          "name": "Deponent verbs with passive (not middle) aorist/future forms"
+        }
+      ],
+      "vocab_lemmas": [
+        "ἀναλαμβάνω",
+        "βάλλω",
+        "γίνομαι",
+        "γινώσκω",
+        "διδάσκω",
+        "κηρύσσω",
+        "λαμβάνω",
+        "πορεύομαι",
+        "ἐγείρω",
+        "ἀκούω",
+        "φέρω",
+        "ἄγω",
+        "βλέπω"
+      ],
+      "reading_ref": "machen:16",
+      "notes": "Drill aorist passive and future passive indicative of λύω-type verbs, using vocabulary items presented as aorist passive forms keyed to their present-tense lemmas (e.g. ἐβλήθην < βάλλω); include a few second aorist passives (θ-less, e.g. ἐγράφην) and deponents with passive-form aorists (ἐγενήθην beside ἐγενόμην) but avoid future/perfect passive stems (4th/5th principal parts) not yet studied. Note ὥφθην is also treated as aor. pass. of ὁράω alongside βλέπω.",
+      "validation_notes": [],
+      "verifier_notes": [
+        "Missing grammar topic: formation of aorist passive stems from consonant-final verb stems (§204: π/β→φ, κ/γ→χ, τ/δ/θ→σ before θη) — the direct parallel of GK.FUT.MUTE.STEM which lesson 13's entry does encode"
+      ],
+      "reviewed": false
+    },
+    {
+      "n": 17,
+      "title": "The Third Declension",
+      "concepts": [
+        {
+          "id": "GK.DECL.3",
+          "name": "Third declension nouns (consonant stems, case endings, dative plural changes)"
+        },
+        {
+          "id": "GK.ACCENT",
+          "name": "Monosyllable accent rule: accent on ultima in gen./dat. (circumflex in gen. plur.)"
+        }
+      ],
+      "vocab_lemmas": [
+        "ἅγιος",
+        "αἷμα",
+        "αἰών",
+        "ἄρχων",
+        "γράμμα",
+        "ἐλπίς",
+        "θέλημα",
+        "νύξ",
+        "ὄνομα",
+        "πνεῦμα",
+        "ῥῆμα",
+        "σάρξ",
+        "σῶμα"
+      ],
+      "reading_ref": "machen:17",
+      "notes": "Practice should stick to third-declension nouns whose genitive singular and gender are given (ἐλπίς/ἐλπίδος, νύξ/νυκτός, ἄρχων/ἄρχοντος, and neuter -μα nouns like ὄνομα/ὀνόματος), always drilling genitive+gender alongside the nominative since the stem and gender cannot be predicted from the nominative alone. Avoid introducing new third-declension nouns without their genitive form, and keep dative plural forms (ἐλπίσι, νυξί, ἄρχουσι) as a focal difficulty.",
+      "validation_notes": [],
+      "verifier_notes": [
+        "Misses the -μα/-ματος neuter noun class (§222), a separately headed topic with its own paradigm (ὄνομα) and the rule that all such nouns are neuter",
+        "Minor: misses §§218-219 (gender of 3rd-decl. nouns unpredictable; genitive singular must be learned to find the stem)"
+      ],
+      "reviewed": false
+    },
+    {
+      "n": 18,
+      "title": "Present Participles; Use of Participles",
+      "concepts": [
+        {
+          "id": "GK.PRES.ACT.PTCP",
+          "name": "Present active participle (λύων, λύουσα, λῦον)"
+        },
+        {
+          "id": "GK.PRES.MP.PTCP",
+          "name": "Present middle/passive participle (λυόμενος, -η, -ον)"
+        },
+        {
+          "id": "GK.PTCP.ATTR",
+          "name": "Attributive use of the participle"
+        },
+        {
+          "id": "GK.PTCP.TENSE",
+          "name": "Tense of the participle as relative to the leading verb"
+        },
+        {
+          "id": "GK.PTCP.PRED",
+          "name": "Predicate (circumstantial) use of the participle, translated by a temporal clause"
+        }
+      ],
+      "vocab_lemmas": [
+        "προσέρχομαι"
+      ],
+      "reading_ref": "machen:18",
+      "notes": "Practice should center on present active and present middle/passive participles of already-known -ω verbs (e.g. λύω, διδάσκω) agreeing in gender/number/case with a noun, in both attributive (ὁ ἀπόστολος ὁ λέγων...) and predicate/circumstantial position (translated with 'while'); use προσέρχομαι with the dative and the irregular participle ὤν, οὖσα, ὄν of εἰμί. Avoid aorist or other non-present participles and avoid indirect discourse constructions, which are not yet introduced.",
+      "validation_notes": [
+        "ὤν NOT IN CORPUS"
+      ],
+      "verifier_notes": [
+        "Vocabulary miss: ὤν, οὖσα, ὄν (present participle of εἰμί) is in the §225 vocabulary but absent from vocab_lemmas"
+      ],
+      "reviewed": false
+    },
+    {
+      "n": 19,
+      "title": "Aorist Participles Active and Middle; Use of Participles (continued); The Negatives οὐ and μή",
+      "concepts": [
+        {
+          "id": "GK.AOR.ACT.PTCP",
+          "name": "Aorist active participle"
+        },
+        {
+          "id": "GK.AOR.MID.PTCP",
+          "name": "Aorist middle participle"
+        },
+        {
+          "id": "GK.AOR2.ACT.PTCP",
+          "name": "Second aorist active participle"
+        },
+        {
+          "id": "GK.AOR2.MID.PTCP",
+          "name": "Second aorist middle participle"
+        },
+        {
+          "id": "GK.PTCP.TIME",
+          "name": "Relative time of the aorist participle (action prior to leading verb)"
+        },
+        {
+          "id": "GK.NEG.OU.ME",
+          "name": "Negatives οὐ and μή"
+        }
+      ],
+      "vocab_lemmas": [
+        "ἄγω",
+        "ἀποθνῄσκω",
+        "ἀποκρίνομαι",
+        "λέγω",
+        "ἔρχομαι",
+        "φέρω",
+        "βλέπω"
+      ],
+      "reading_ref": "machen:19",
+      "notes": "Drill aorist active and middle participles (λύσας/λυσάμενος) alongside the irregular second aorist participles in this lesson's vocabulary (ἀγαγών, εἰπών, ἐλθών, ἐνεγκών, ἰδών), stressing that the augment is dropped even though it appears in the corresponding aorist indicative. Emphasize translating the aorist participle as action prior to the leading verb ('having done', 'when/after he had...'), both circumstantially and attributively/substantively with the article; avoid perfect or pluperfect participles, which are not yet introduced.",
+      "validation_notes": [
+        "ἀποθνήσκω -> auto-corrected to ἀποθνῄσκω"
+      ],
+      "verifier_notes": [],
+      "reviewed": false
+    },
+    {
+      "n": 20,
+      "title": "The Aorist Passive Participle; The Genitive Absolute",
+      "concepts": [
+        {
+          "id": "GK.AOR.PASS.PTCP",
+          "name": "Aorist passive participle"
+        },
+        {
+          "id": "GK.GENABS",
+          "name": "Genitive absolute construction"
+        }
+      ],
+      "vocab_lemmas": [
+        "ἱμάτιον",
+        "οἰκία",
+        "παιδίον",
+        "συναγωγή",
+        "στρατιώτης",
+        "γράφω",
+        "ἐκεῖ",
+        "εὐθέως",
+        "εὐθύς",
+        "φυλακή"
+      ],
+      "reading_ref": "machen:20",
+      "notes": "Practice sentences should pair the aorist passive participle (λυθείς type, θε added to the verb stem, irregular non-recessive accent in nom. sg. masc.) with genitive absolute constructions where the participle's subject differs from that of the main verb; use ὑπό + genitive for the agent of the passive action, and avoid genitive absolute when the participial noun/pronoun is coreferential with the main clause subject (use a simple circumstantial participle instead).",
+      "validation_notes": [],
+      "verifier_notes": [],
+      "reviewed": false
+    },
+    {
+      "n": 21,
+      "title": "The Subjunctive Mood",
+      "concepts": [
+        {
+          "id": "GK.PRES.ACT.SUBJ",
+          "name": "Present active subjunctive"
+        },
+        {
+          "id": "GK.PRES.MP.SUBJ",
+          "name": "Present middle/passive subjunctive"
+        },
+        {
+          "id": "GK.AOR.ACT.SUBJ",
+          "name": "Aorist active subjunctive"
+        },
+        {
+          "id": "GK.AOR.MID.SUBJ",
+          "name": "Aorist middle subjunctive"
+        },
+        {
+          "id": "GK.AOR.PASS.SUBJ",
+          "name": "Aorist passive subjunctive"
+        },
+        {
+          "id": "GK.AOR2.ACT.SUBJ",
+          "name": "Second aorist active/middle subjunctive"
+        },
+        {
+          "id": "GK.SUBJ.HORT",
+          "name": "Hortatory subjunctive (1st pl. exhortation)"
+        },
+        {
+          "id": "GK.SUBJ.PURPOSE",
+          "name": "Purpose clauses with ἵνα + subjunctive"
+        },
+        {
+          "id": "GK.CONDITION",
+          "name": "Future conditions (ἐάν + subj.) vs. other conditions (εἰ + indic.)"
+        },
+        {
+          "id": "GK.NEG.SUBJ",
+          "name": "Negative μή (and μηδέ, μηκέτι) with the subjunctive"
+        }
+      ],
+      "vocab_lemmas": [
+        "ἁμαρτάνω",
+        "δικαιοσύνη",
+        "ἐάν",
+        "εἰ",
+        "ἵνα",
+        "λαός",
+        "λοιπός",
+        "μακάριος",
+        "μαρτυρία",
+        "μηδέ",
+        "μηκέτι",
+        "ὄχλος"
+      ],
+      "reading_ref": "machen:21",
+      "notes": "Prefer aorist subjunctive forms (esp. with ἵνα or ἐάν) over present subjunctive in generated practice, per the book's own guidance that the aorist presents the action more simply; use ἵνα+subjunctive for purpose and ἐάν+subjunctive for future/present-general conditions, contrasting with εἰ+indicative for simple conditions, and negate subjunctives with μή/μηδέ/μηκέτι rather than οὐ; avoid indirect discourse with ὅτι since that is only contrasted here, not taught.",
+      "validation_notes": [
+        "εὐαγγελίζομαι NOT IN CORPUS (candidates: εὐαγγέλιον, εὐαγγελίζω, εὐαγγελιστής)"
+      ],
+      "verifier_notes": [
+        "Vocabulary miss: εὐαγγελίζομαι is in the §268 vocabulary but absent from vocab_lemmas",
+        "Concept miss: §283 'The Tenses in the Subjunctive' — no time distinction, present vs. aorist is aspect only",
+        "Concept miss: present subjunctive of εἰμί (§282)"
+      ],
+      "reviewed": false
+    },
+    {
+      "n": 22,
+      "title": "Lesson XXII: The Present and Aorist Infinitives; The Articular Infinitive; Indirect Discourse; Proper Names",
+      "concepts": [
+        {
+          "id": "GK.PRES.ACT.INF",
+          "name": "Present active infinitive"
+        },
+        {
+          "id": "GK.PRES.MP.INF",
+          "name": "Present middle/passive infinitive"
+        },
+        {
+          "id": "GK.AOR.ACT.INF",
+          "name": "Aorist active infinitive"
+        },
+        {
+          "id": "GK.AOR.MID.INF",
+          "name": "Aorist middle infinitive"
+        },
+        {
+          "id": "GK.AOR.PASS.INF",
+          "name": "Aorist passive infinitive"
+        },
+        {
+          "id": "GK.AOR2.ACT.INF",
+          "name": "Second aorist active infinitive"
+        },
+        {
+          "id": "GK.AOR2.MID.INF",
+          "name": "Second aorist middle infinitive"
+        },
+        {
+          "id": "GK.ACCENT",
+          "name": "Irregular accent of aorist active and passive infinitives"
+        },
+        {
+          "id": "GK.INF.ARTICULAR",
+          "name": "Articular infinitive (as noun, after prepositions, with accusative subject)"
+        },
+        {
+          "id": "GK.INDIRECT",
+          "name": "Indirect discourse (accusative + infinitive; ὅτι + indicative retaining original tense)"
+        },
+        {
+          "id": "GK.PROPERNAME",
+          "name": "Proper names and the article"
+        },
+        {
+          "id": "GK.DECL.IRREG",
+          "name": "Irregular declension of Ἰησοῦς"
+        }
+      ],
+      "vocab_lemmas": [
+        "ἔξεστι(ν)",
+        "θέλω",
+        "Ἰησοῦς",
+        "Ἰουδαῖος",
+        "κελεύω",
+        "κώμη",
+        "μέλλω",
+        "ὀφείλω",
+        "πάσχω",
+        "πρό",
+        "σωτηρία",
+        "Φαρισαῖος",
+        "Χριστός"
+      ],
+      "reading_ref": "machen:22",
+      "notes": "Drill present vs. aorist infinitives (active, middle, passive, plus the second-aorist type λιπεῖν/λιπέσθαι) after δεῖ, ἔξεστι, θέλω, μέλλω, ὀφείλω, κελεύω, and the articular infinitive after prepositions (μετὰ τό, πρὸ τοῦ, διὰ τό, ἐν τῷ, εἰς τό for purpose), including infinitives with an accusative subject. For indirect discourse, contrast ὅτι + indicative (retaining the tense of the original direct discourse, unlike English) with the accusative-and-infinitive construction; avoid introducing participial genitive absolutes as substitutes here since the point is the infinitive constructions themselves.",
+      "validation_notes": [
+        "δεῖ NOT IN CORPUS",
+        "ἔξεστιν -> auto-corrected to ἔξεστι(ν)"
+      ],
+      "verifier_notes": [
+        "Vocabulary miss: δεῖ (impersonal, 'it is necessary', takes acc. + infinitive) is the first §292 vocabulary entry but absent from vocab_lemmas",
+        "Minor concept miss: negative of the infinitive is μή (§300); present infinitive of εἰμί = εἶναι (§297)"
+      ],
+      "reviewed": false
+    },
+    {
+      "n": 23,
+      "title": "Contract Verbs",
+      "concepts": [
+        {
+          "id": "GK.CONTRACT",
+          "name": "Contract verbs in -άω, -έω, -όω and rules of vowel contraction"
+        },
+        {
+          "id": "GK.ACCENT",
+          "name": "Accentuation of contracted syllables"
+        },
+        {
+          "id": "GK.PRES.ACT.IND",
+          "name": "Present active indicative of contract verbs"
+        },
+        {
+          "id": "GK.PRES.MP.IND",
+          "name": "Present middle/passive indicative of contract verbs"
+        },
+        {
+          "id": "GK.IMPF.ACT.IND",
+          "name": "Imperfect active indicative of contract verbs"
+        },
+        {
+          "id": "GK.IMPF.MP.IND",
+          "name": "Imperfect middle/passive indicative of contract verbs"
+        },
+        {
+          "id": "GK.PRES.ACT.INF",
+          "name": "Present active infinitive of contract verbs (exceptional contraction -άειν > -ᾶν, -όειν > -οῦν)"
+        },
+        {
+          "id": "GK.PRES.ACT.PTCP",
+          "name": "Present active participle of contract verbs"
+        }
+      ],
+      "vocab_lemmas": [
+        "ἀγαπάω",
+        "ἀκολουθέω",
+        "Γαλιλαία",
+        "δηλόω",
+        "εὐλογέω",
+        "εὐχαριστέω",
+        "ζητέω",
+        "θεωρέω",
+        "καλέω",
+        "λαλέω",
+        "παρακαλέω",
+        "περιπατέω",
+        "ποιέω",
+        "προσκυνέω",
+        "σταυρόω",
+        "τηρέω",
+        "τιμάω",
+        "φιλέω",
+        "χώρα"
+      ],
+      "reading_ref": "machen:23",
+      "notes": "Practice should drill contraction of -άω/-έω/-όω verbs across present and imperfect, all moods and the participle, using only vocabulary items already introduced (e.g. ἀγαπάω, ποιέω, τηρέω, λαλέω); avoid μι-verbs and uncontracted forms, since the uncontracted lexical form is cited only for principal-part purposes and never occurs in running text. Favor short indicative and participial sentences (as in the exercises) that require the learner to apply the accent-of-contraction rules (§III) rather than memorize surface forms.",
+      "validation_notes": [],
+      "verifier_notes": [
+        "Concept miss: §321 principal parts of -άω/-έω/-όω verbs — stem vowel lengthened (α as well as ε → η) before tense suffixes, contraction only in the present system; a headed section of the lesson",
+        "Minor: §317 covers the present in all moods studied so far (incl. subjunctive), not just indicative/infinitive/participle as listed"
+      ],
+      "reviewed": false
+    },
+    {
+      "n": 24,
+      "title": "Future and First Aorist Active and Middle of Liquid Verbs; Future of εἰμί; Reflexive and Reciprocal Pronouns",
+      "concepts": [
+        {
+          "id": "GK.LIQUID",
+          "name": "Liquid verbs (stems ending in λ, μ, ν, ρ)"
+        },
+        {
+          "id": "GK.FUT.ACT.IND",
+          "name": "Future active indicative of liquid verbs (-εσ- contracted, conjugated like -έω present)"
+        },
+        {
+          "id": "GK.FUT.MID.IND",
+          "name": "Future middle indicative of liquid verbs; future of εἰμί"
+        },
+        {
+          "id": "GK.AOR.ACT.IND",
+          "name": "First aorist active of liquid verbs (-α ending, stem lengthened, no σ)"
+        },
+        {
+          "id": "GK.AOR.MID.IND",
+          "name": "First aorist middle of liquid verbs"
+        },
+        {
+          "id": "GK.PRON.REFL",
+          "name": "Reflexive pronouns ἐμαυτοῦ, σεαυτοῦ, ἑαυτοῦ"
+        },
+        {
+          "id": "GK.PRON.RECIP",
+          "name": "Reciprocal pronoun ἀλλήλων"
+        },
+        {
+          "id": "GK.SYNTAX.THERE",
+          "name": "English preparatory 'there' not translated in Greek"
+        }
+      ],
+      "vocab_lemmas": [
+        "ἀλλήλων",
+        "ἀποθνῄσκω",
+        "ἀποκτείνω",
+        "ἀποστέλλω",
+        "αἴρω",
+        "βάλλω",
+        "ἑαυτοῦ",
+        "ἐγείρω",
+        "ἐμαυτοῦ",
+        "ἐπί",
+        "εἰμί",
+        "μένω",
+        "μετανοέω",
+        "σεαυτοῦ",
+        "σπείρω",
+        "φοβέομαι"
+      ],
+      "reading_ref": "machen:24",
+      "notes": "Practice should drill the liquid-verb future/aorist pattern (κρίνω, βάλλω, μένω, ἀποστέλλω, ἐγείρω, ἀποκτείνω, αἴρω, σπείρω) contrasted with regular -σ- futures/aorists already known; keep the future of εἰμί (ἔσομαι) as a fixed paradigm item. Pair reflexive pronouns (ἐμαυτοῦ/σεαυτοῦ/ἑαυτοῦ) and the reciprocal ἀλλήλων in short clauses showing person agreement with the subject; avoid introducing new tense-moods (e.g., no perfect/pluperfect) or unrelated pronoun classes in this lesson's exercises.",
+      "validation_notes": [
+        "ἀποθνήσκω -> auto-corrected to ἀποθνῄσκω"
+      ],
+      "verifier_notes": [],
+      "reviewed": false
+    },
+    {
+      "n": 25,
+      "title": "More Nouns of the Third Declension; Adjectives of the Third Declension in -ης, -ες",
+      "concepts": [
+        {
+          "id": "GK.DECL.3",
+          "name": "Third declension nouns: χάρις-type (dental stem, -ν accusative), πόλις-type (ι/εω-stem), γένος-type (neuter σ-stem), βασιλεύς-type (ευ-stem)"
+        },
+        {
+          "id": "GK.ADJ",
+          "name": "Third declension adjectives in -ης, -ες (ἀληθής, πλήρης)"
+        }
+      ],
+      "vocab_lemmas": [
+        "ἀληθής",
+        "ἀνήρ",
+        "ἀρχιερεύς",
+        "βασιλεύς",
+        "γένος",
+        "γραμματεύς",
+        "ἔθνος",
+        "ἱερεύς",
+        "μήτηρ",
+        "ὄρος",
+        "πατήρ",
+        "πίστις",
+        "πλήρης",
+        "πόλις",
+        "χάρις"
+      ],
+      "reading_ref": "machen:25",
+      "notes": "Drill the four third-declension noun patterns introduced (χάρις, πόλις, γένος, βασιλεύς) and the -ης/-ες adjective ἀληθής across nominative/genitive/dative/accusative singular and plural, since genitive singular plus gender is the key to recognizing each; verb forms should stay within previously covered tenses/moods (this lesson introduces no new verb morphology), and πατήρ/ἀνήρ/μήτηρ declension should be treated as review rather than new material.",
+      "validation_notes": [],
+      "verifier_notes": [],
+      "reviewed": false
+    },
+    {
+      "n": 26,
+      "title": "Declension of πᾶς, πολύς, μέγας, and Numerals; Attributive and Substantive Uses of Prepositional Phrases and of the Genitive; Accusative of Extent of Time and Space",
+      "concepts": [
+        {
+          "id": "GK.ADJ",
+          "name": "Irregular declension of πᾶς, πολύς, μέγας"
+        },
+        {
+          "id": "GK.NUM",
+          "name": "Cardinal numerals and their declension (εἷς, δύο, τρεῖς, τέσσαρες, etc.)"
+        },
+        {
+          "id": "GK.CASE.USES",
+          "name": "Attributive/substantive prepositional phrases and genitive; accusative of extent of time and space"
+        }
+      ],
+      "vocab_lemmas": [
+        "δύο",
+        "εἷς",
+        "ἕξ",
+        "ἔτος",
+        "ἤ",
+        "θέλω",
+        "Ἰάκωβος",
+        "καθαρός",
+        "μέγας",
+        "μηδείς",
+        "ὀλίγος",
+        "οὐδείς",
+        "πᾶς",
+        "πεντακισχίλιοι",
+        "πέντε",
+        "πλῆθος",
+        "πολύς",
+        "πούς",
+        "στάδιον",
+        "τέσσαρες",
+        "τρεῖς",
+        "ὡς"
+      ],
+      "reading_ref": "machen:26",
+      "notes": "Drill πᾶς/πολύς/μέγας in both predicate (πᾶσα ἡ πόλις) and attributive (ἡ πᾶσα πόλις) positions, plus numeral agreement with nouns; favor attributive prepositional-phrase and genitive substantive constructions (οἱ ἐν τῇ πόλει, οἱ τοῦ Ἰησοῦ) and accusative-of-extent phrases (ἔμεινα ἡμέραν μίαν); avoid introducing new moods or verb tenses beyond what's already covered.",
+      "validation_notes": [],
+      "verifier_notes": [
+        "Missing grammar topic: the use of πᾶς (§§367-369) — predicate vs. attributive position (πᾶσα ἡ πόλις vs. ἡ πᾶσα πόλις), πᾶς + singular = 'every', πᾶς with article + participle; the map's GK.ADJ entry covers only the declension"
+      ],
+      "reviewed": false
+    },
+    {
+      "n": 27,
+      "title": "Interrogative, Indefinite, and Relative Pronouns; Deliberative Questions; Conditional Relative Clauses",
+      "concepts": [
+        {
+          "id": "GK.PRON.INTERR",
+          "name": "Interrogative pronoun τίς, τί (who? which? what?)"
+        },
+        {
+          "id": "GK.PRON.INDEF",
+          "name": "Indefinite pronoun τις, τι (enclitic: someone, something)"
+        },
+        {
+          "id": "GK.PRON.REL",
+          "name": "Relative pronoun ὅς, ἥ, ὅ (who, which)"
+        },
+        {
+          "id": "GK.INDIRECT",
+          "name": "Indirect questions (retain mood/tense of direct question)"
+        },
+        {
+          "id": "GK.QUESTION",
+          "name": "Deliberative questions (subjunctive expecting an imperative-type answer)"
+        },
+        {
+          "id": "GK.CONDITION",
+          "name": "Conditional relative clauses (-ever clauses with ἄν/ἐάν + subjunctive)"
+        },
+        {
+          "id": "GK.REL.ATTRACTION",
+          "name": "Case attraction of the relative pronoun to its antecedent"
+        }
+      ],
+      "vocab_lemmas": [
+        "αἰτέω",
+        "εἰ",
+        "ἐπερωτάω",
+        "ἐρωτάω",
+        "καρπός",
+        "κρίσις",
+        "ὅπου",
+        "ὅς",
+        "ὅταν",
+        "ὅτε",
+        "οὖν",
+        "πίνω",
+        "ποῦ",
+        "πῶς",
+        "τίς",
+        "τις",
+        "ἐσθίω"
+      ],
+      "reading_ref": "machen:27",
+      "notes": "Practice interrogative τίς/τί, enclitic indefinite τις/τι, and relative ὅς ἥ ὅ declensions in short questions and relative clauses; contrast indirect questions (mood/tense preserved from the direct form) with deliberative subjunctive questions (τί ποιήσωμεν;). Favor -ever conditional relative clauses with ἄν/ἐάν + subjunctive (ὃς ἄν, ὅπου ἐάν, etc.) modeled on the exercise sentences, and only lightly touch relative case-attraction (§398) as an advanced aside rather than a drilled pattern.",
+      "validation_notes": [],
+      "verifier_notes": [],
+      "reviewed": false
+    },
+    {
+      "n": 28,
+      "title": "The Imperative Mood",
+      "concepts": [
+        {
+          "id": "GK.PRES.ACT.IMPV",
+          "name": "Present active imperative"
+        },
+        {
+          "id": "GK.PRES.MP.IMPV",
+          "name": "Present middle/passive imperative"
+        },
+        {
+          "id": "GK.AOR.ACT.IMPV",
+          "name": "Aorist active imperative"
+        },
+        {
+          "id": "GK.AOR.MID.IMPV",
+          "name": "Aorist middle imperative"
+        },
+        {
+          "id": "GK.AOR.PASS.IMPV",
+          "name": "Aorist passive imperative"
+        },
+        {
+          "id": "GK.AOR2.ACT.IMPV",
+          "name": "Second aorist active imperative"
+        },
+        {
+          "id": "GK.AOR2.MID.IMPV",
+          "name": "Second aorist middle imperative"
+        },
+        {
+          "id": "GK.MI.OTHER",
+          "name": "Present imperative of εἰμί"
+        },
+        {
+          "id": "GK.PROHIB",
+          "name": "Prohibition (μή with present imperative or aorist subjunctive)"
+        },
+        {
+          "id": "GK.PRON.INDEF",
+          "name": "Indefinite relative pronoun ὅστις"
+        }
+      ],
+      "vocab_lemmas": [
+        "ἁγιάζω",
+        "ἀγρός",
+        "γῆ",
+        "ἐγγύς",
+        "ἐλεεινός",
+        "ὅστις",
+        "οὖς",
+        "ὀφθαλμός",
+        "ὅσος",
+        "σκότος",
+        "ὕδωρ",
+        "φῶς"
+      ],
+      "reading_ref": "machen:28",
+      "notes": "Drill present and aorist (1st and 2nd) active/middle/passive imperative paradigms of λύω and λείπω, including irregular accents on λιποῦ, εἰπέ, ἐλθέ, and the imperative of εἰμί; pair prohibition practice (μή + present imperative vs. μή + aorist subjunctive) but avoid μή + aorist imperative, which is ungrammatical. Since the imperative has no time distinction—only aspect (continuing vs. simple/undefined action)—avoid framing present-vs-aorist imperative practice items as a tense/time contrast.",
+      "validation_notes": [
+        "ἐλεέω -> auto-corrected to ἐλεεινός"
+      ],
+      "verifier_notes": [
+        "Vocab error: map lists ἐλεεινός ('pitiable', adj.) but the lesson's vocabulary word is the verb ἐλεέω, 'I have mercy on, I pity' (used as ἐλέησον in ex. I.3)",
+        "Missing grammar topic: the tenses in the imperative (§420) — aorist vs. present imperative is aspectual, not temporal",
+        "Possible over-extraction: GK.PRON.INDEF (ὅστις) is listed as a taught concept, but ὅστις appears only as a glossed vocabulary entry; the lesson's grammar sections (§§404-423) are entirely on the imperative"
+      ],
+      "reviewed": false
+    },
+    {
+      "n": 29,
+      "title": "Lesson XXIX: The Perfect Tense",
+      "concepts": [
+        {
+          "id": "GK.PERF.ACT.IND",
+          "name": "Perfect active indicative"
+        },
+        {
+          "id": "GK.PERF.ACT.INF",
+          "name": "Perfect active infinitive"
+        },
+        {
+          "id": "GK.PERF.ACT.PTCP",
+          "name": "Perfect active participle"
+        },
+        {
+          "id": "GK.PERF.MP.IND",
+          "name": "Perfect middle/passive indicative"
+        },
+        {
+          "id": "GK.PERF.MP.INF",
+          "name": "Perfect middle/passive infinitive"
+        },
+        {
+          "id": "GK.PERF.MP.PTCP",
+          "name": "Perfect middle/passive participle"
+        },
+        {
+          "id": "GK.PERF.REDUP",
+          "name": "Reduplication in perfect stem formation"
+        },
+        {
+          "id": "GK.PLUP",
+          "name": "Pluperfect tense (rare, forms not required)"
+        }
+      ],
+      "vocab_lemmas": [
+        "ἀκούω",
+        "βαπτίζω",
+        "γίνομαι",
+        "γράφω",
+        "γεννάω",
+        "ἐγγίζω",
+        "ἐγείρω",
+        "γινώσκω",
+        "ἔρχομαι",
+        "λέγω",
+        "βλέπω",
+        "θνῄσκω",
+        "μαρτυρέω",
+        "Πέτρος",
+        "πληρόω"
+      ],
+      "reading_ref": "machen:29",
+      "notes": "Drill the perfect active (λέλυκα) and perfect middle/passive (λέλυμαι) paradigms with their irregularly-accented infinitives (λελυκέναι, λελύσθαι) and participles (λελυκώς/-υῖα/-ός; λελυμένος, -η, -ον); when generating practice, use the perfect only where a present state resultant upon a past action is clearly in view, and prefer the aorist otherwise. Perfect passive forms like γέγραπται/λόγος γεγραμμένος are good, easy targets; avoid perfect active subjunctive and pluperfect forms entirely, since the text calls both too rare to require.",
+      "validation_notes": [
+        "θνήσκω -> auto-corrected to θνῄσκω"
+      ],
+      "verifier_notes": [
+        "Missing grammar topic: the use/force of the perfect tense (§§451-452) — present state resultant upon a past action, and why English has no equivalent tense; the map lists only form-building concepts",
+        "Missing grammar topic: second perfects formed without κ (§440, e.g. γέγραφα, ἀκήκοα), plus the stem-change rules for perfect formation (§§435-439, 448-449) which GK.PERF.REDUP covers only for reduplication"
+      ],
+      "reviewed": false
+    },
+    {
+      "n": 30,
+      "title": "Comparison of Adjectives and Adverbs; Genitive, Dative, and Accusative Case Uses; Possessive Adjectives; μή and ἵνα with the Subjunctive",
+      "concepts": [
+        {
+          "id": "GK.ADJ.COMP",
+          "name": "Comparison of adjectives (-τερος/-τατος and -ίων/-ιστος types; declension of μείζων)"
+        },
+        {
+          "id": "GK.CASE.USES.GEN.COMPARISON",
+          "name": "Genitive of comparison and use of ἤ, 'than'"
+        },
+        {
+          "id": "GK.ADV",
+          "name": "Formation and comparison of adverbs (from adjective genitive plural)"
+        },
+        {
+          "id": "GK.CASE.USES.GEN.PLACE",
+          "name": "Genitive with adverbs of place"
+        },
+        {
+          "id": "GK.CASE.USES.GEN.TIME",
+          "name": "Genitive of time within which"
+        },
+        {
+          "id": "GK.CASE.USES.GEN.INF.PURPOSE",
+          "name": "Genitive of the articular infinitive expressing purpose"
+        },
+        {
+          "id": "GK.CASE.USES.DAT.RESPECT",
+          "name": "Dative of respect"
+        },
+        {
+          "id": "GK.CASE.USES.ACC.SPECIFICATION",
+          "name": "Accusative of specification"
+        },
+        {
+          "id": "GK.CASE.USES.DAT.TIME",
+          "name": "Dative of time when"
+        },
+        {
+          "id": "GK.PRON.POSS",
+          "name": "Possessive adjectives (ἐμός, σός, ἡμέτερος, ὑμέτερος)"
+        },
+        {
+          "id": "GK.MH.CONJ",
+          "name": "μή as a conjunction after verbs of fearing and in negative purpose clauses"
+        },
+        {
+          "id": "GK.HINA.SUBJ",
+          "name": "ἵνα with the subjunctive in uses beyond purpose (exhorting, wishing, etc.)"
+        },
+        {
+          "id": "GK.QUESTION",
+          "name": "Questions expecting a negative answer (μή + indicative) vs. positive answer (οὐ + indicative)"
+        }
+      ],
+      "vocab_lemmas": [
+        "ἐμός",
+        "ἔμπροσθεν",
+        "ἐνώπιον",
+        "ἔξω",
+        "ἐχθρός",
+        "ἤ",
+        "ἡμέτερος",
+        "ἴδιος",
+        "ἱκανός",
+        "καλῶς",
+        "κρείττων",
+        "μᾶλλον",
+        "μείζων",
+        "μή",
+        "μήποτε",
+        "ὅπως",
+        "πάλιν",
+        "σάββατον",
+        "σός",
+        "ὑμέτερος"
+      ],
+      "reading_ref": "machen:30",
+      "notes": "Practice should drill comparative/superlative adjective forms (especially the irregular -ίων third-declension type like μείζων, κρείσσων, πλείων) alongside ἤ-than and genitive-of-comparison constructions; keep possessive-adjective examples in the attributive position with the article, and restrict μή/ἵνα-subjunctive practice to fear clauses, negative purpose, and non-purpose ἵνα uses plus μή-questions expecting 'no' — avoid introducing new tenses or unrelated syntax not yet covered.",
+      "validation_notes": [
+        "ἰσχυρότερος NOT IN CORPUS (candidates: ἰσχυρός, ἰσχύς, ἰσχύω)",
+        "κρείσσων -> auto-corrected to κρείττων",
+        "πλείων NOT IN CORPUS"
+      ],
+      "verifier_notes": [
+        "Missing vocab lemma: ἰσχυρός / ἰσχυρότερος ('strong' / 'stronger')",
+        "Missing vocab lemma: πλείων ('more', comparative of πολύς)",
+        "Minor: map gives κρείττων where the lesson vocabulary has the form κρείσσων"
+      ],
+      "reviewed": false
+    },
+    {
+      "n": 31,
+      "title": "The Conjugation of δίδωμι; Second Aorist of γινώσκω; The Article before μέν and δέ; The Coincident Aorist Participle",
+      "concepts": [
+        {
+          "id": "GK.MI.DIDOMI",
+          "name": "Conjugation of δίδωμι (present, imperfect, mixed aorist active)"
+        },
+        {
+          "id": "GK.AOR2.ACT.IND",
+          "name": "Second aorist of μι-form type (γινώσκω → ἔγνων; ἔχω → ἔσχον; first-aorist endings on second-aorist stem ἔδωκα)"
+        },
+        {
+          "id": "GK.ART",
+          "name": "Article used as a pronoun before μέν and δέ"
+        },
+        {
+          "id": "GK.AOR.ACT.PTCP",
+          "name": "Aorist participle denoting the same act as the leading verb (coincident action)"
+        }
+      ],
+      "vocab_lemmas": [
+        "αἰώνιος",
+        "ἀντί",
+        "ἀποδίδωμι",
+        "γυνή",
+        "δίδωμι",
+        "γινώσκω",
+        "ἐξουσία",
+        "ἔχω",
+        "ζάω",
+        "ἰδού",
+        "μόνος",
+        "μυστήριον",
+        "ὁράω",
+        "παραδίδωμι",
+        "πειράζω",
+        "ποῖος",
+        "Σίμων",
+        "χείρ"
+      ],
+      "reading_ref": "machen:31",
+      "notes": "Focus practice on δίδωμι's present, imperfect, and aorist active (indicative ἔδωκα-type but subjunctive/imperative/infinitive/participle built on the bare stem δο-), plus ἔγνων as a second-aorist paradigm; avoid the rare present/aorist middle-passive forms of δίδωμι. Drill ὁ μέν... ὁ δέ constructions where the article functions as a pronoun (not as a substantized-phrase article like οἱ ἐν τῷ οἴκῳ), and use aorist participles only for action coincident with (not prior to) the main verb.",
+      "validation_notes": [],
+      "verifier_notes": [],
+      "reviewed": false
+    },
+    {
+      "n": 32,
+      "title": "Lesson XXXII: Conjugation of τίθημι, ἀφίημι, δείκνυμι, and ἀπόλλυμι; Accusative and Infinitive in Result Clauses; The Subjunctive after ἕως",
+      "concepts": [
+        {
+          "id": "GK.MI.TITHEMI",
+          "name": "Conjugation of τίθημι (present and aorist systems, active and middle)"
+        },
+        {
+          "id": "GK.MI.OTHER",
+          "name": "Conjugation of ἀφίημι, δείκνυμι, and ἀπόλλυμι"
+        },
+        {
+          "id": "GK.RESULT.WSTE",
+          "name": "ὥστε + accusative and infinitive expressing result"
+        },
+        {
+          "id": "GK.HEOS.SUBJ",
+          "name": "Subjunctive with ἕως ἄν (until); indicative with ἕως (while) or for actual past occurrence"
+        },
+        {
+          "id": "GK.ACCENT",
+          "name": "Accent of ὥστε, ὥσπερ (originally enclitic τε)"
+        }
+      ],
+      "vocab_lemmas": [
+        "ἀνοίγω",
+        "ἀπόλλυμι",
+        "ἀρχή",
+        "ἀφίημι",
+        "δείκνυμι",
+        "εὑρίσκω",
+        "ἐπιτίθημι",
+        "ἕως",
+        "καθώς",
+        "καιρός",
+        "μνημεῖον",
+        "μόνον",
+        "πῦρ",
+        "σημεῖον",
+        "στόμα",
+        "τίθημι",
+        "ὑπάγω",
+        "χαίρω",
+        "χρόνος",
+        "ὧδε",
+        "ὥσπερ",
+        "ὥστε"
+      ],
+      "reading_ref": "machen:32",
+      "notes": "Practice should focus on recognizing τίθημι/ἀφίημι forms by distinguishing the reduplicated present stem (τιθε-/ἱε-) from the bare second-aorist stem (θε-/ἑ-), plus ὥστε + accusative/infinitive result clauses and ἕως (ἄν) + subjunctive vs. indicative for temporal clauses; avoid introducing unrelated μι-verb paradigms (δίδωμι, ἵστημι) except as noted for δείκνυμι/ἀπόλλυμι's optional ω-verb forms.",
+      "validation_notes": [],
+      "verifier_notes": [],
+      "reviewed": false
+    },
+    {
+      "n": 33,
+      "title": "Conjugation of ἵστημι and οἶδα; The Optative Mood; Conditions Contrary to Fact; Uses of γίνομαι",
+      "concepts": [
+        {
+          "id": "GK.MI.HISTEMI",
+          "name": "Conjugation of ἵστημι (present, future, 1st aorist transitive; 2nd aorist and perfect intransitive; middle/passive)"
+        },
+        {
+          "id": "GK.OIDA",
+          "name": "Conjugation of οἶδα, 2nd perfect used as present (with pluperfect ἤδειν as imperfect)"
+        },
+        {
+          "id": "GK.OPT",
+          "name": "The Optative Mood (survival in NT Greek, wish construction μὴ γένοιτο)"
+        },
+        {
+          "id": "GK.CONDITION",
+          "name": "Conditions contrary to fact (secondary tenses of indicative with εἰ and ἄν)"
+        },
+        {
+          "id": "GK.GINOMAI.USES",
+          "name": "Uses of γίνομαι beyond 'become' (happen, come to pass, arise; καὶ ἐγένετο idiom)"
+        }
+      ],
+      "vocab_lemmas": [
+        "ἀνίστημι",
+        "δοκέω",
+        "δύναμαι",
+        "δύναμις",
+        "ἕτερος",
+        "ἵστημι",
+        "κάθημαι",
+        "οἶδα",
+        "ὅλος",
+        "ὅμοιος",
+        "οὔτε",
+        "παραγίνομαι",
+        "φανερόω",
+        "φημί",
+        "ὡς"
+      ],
+      "reading_ref": "machen:33",
+      "notes": "Drill ἵστημι's transitive vs. intransitive system split (1st aorist ἔστησα = caused to stand; 2nd aorist ἔστην/perfect ἕστηκα = stood) and οἶδα as a perfect with present meaning; for the optative, use only the fixed wish idiom μὴ γένοιτο rather than generating free optative paradigms; contrary-to-fact conditions should pair secondary-tense indicatives in both clauses with εἰ...ἄν; when practicing γίνομαι, favor non-'become' glosses (happen, arise, come to pass) and avoid forcing a predicate nominative.",
+      "validation_notes": [
+        "βαίνω NOT IN CORPUS"
+      ],
+      "verifier_notes": [
+        "vocab omits ἔβην (2nd aor. of βαίνω), listed in the §538 vocabulary — map has 15 of the lesson's 16 entries",
+        "map numbers this lesson 33 but the text header reads LESSON XXXII (possible off-by-one in lesson numbering)"
+      ],
+      "reviewed": false
+    }
+  ]
+}

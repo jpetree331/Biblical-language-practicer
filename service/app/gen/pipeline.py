@@ -97,6 +97,70 @@ def select_vocab_rows(conn, rank_from: int, rank_to: int) -> list[dict]:
     return rows
 
 
+def select_vocab_rows_by_lemmas(conn, lemmas: list[str]) -> list[dict]:
+    """Like select_vocab_rows but for an explicit lemma list (chapter decks)."""
+    rows = []
+    for lemma in lemmas:
+        lemma = db.nfc(lemma)
+        freq = conn.execute(
+            "select rank, count from lemma_freq where corpus_id='sblgnt' and lemma=?",
+            (lemma,),
+        ).fetchone()
+        if freq is None:
+            continue  # loader guarantees this can't happen for loaded maps
+        samples = conn.execute(
+            """
+            select id, book, chapter, verse, surface, parse from corpus_tokens
+            where corpus_id = 'sblgnt' and lemma = ? order by id limit 3
+            """,
+            (lemma,),
+        ).fetchall()
+        rows.append(
+            {
+                "lemma": lemma,
+                "rank": freq["rank"],
+                "count": freq["count"],
+                "samples": [
+                    {
+                        "token_id": s["id"],
+                        "ref": f"{s['book']}.{s['chapter']}.{s['verse']}",
+                        "surface": s["surface"],
+                        "parse": s["parse"],
+                    }
+                    for s in samples
+                ],
+            }
+        )
+    return rows
+
+
+def select_parsing_rows_filtered(
+    conn, parse_like: str, lemma_in: list[str], limit: int = 80
+) -> list[dict]:
+    """Corpus-wide tokens matching a construction, restricted to known lemmas
+    (chapter parsing decks: practice new grammar on vocabulary already met)."""
+    lemmas = [db.nfc(x) for x in lemma_in]
+    placeholders = ",".join("?" * len(lemmas))
+    tokens = conn.execute(
+        f"""
+        select id, book, chapter, verse, surface, lemma, parse from corpus_tokens
+        where corpus_id = 'sblgnt' and parse like ? and lemma in ({placeholders})
+        order by id limit ?
+        """,
+        (parse_like, *lemmas, limit),
+    ).fetchall()
+    return [
+        {
+            "token_id": t["id"],
+            "ref": f"{t['book']}.{t['chapter']}.{t['verse']}",
+            "surface": t["surface"],
+            "lemma": t["lemma"],
+            "parse": t["parse"],
+        }
+        for t in tokens
+    ]
+
+
 def select_parsing_rows(conn, book: str, chapter: int, parse_like: str, limit: int = 60) -> list[dict]:
     tokens = conn.execute(
         """
@@ -257,10 +321,13 @@ async def run_batch(spec: dict) -> dict:
         conn.commit()
 
         # -- 1. Generate ----------------------------------------------------
-        if spec["kind"] == "vocab":
-            corpus_rows = select_vocab_rows(conn, spec["rank_from"], spec["rank_to"])
+        if spec["kind"] in ("vocab", "vocab_lemmas"):
+            if spec["kind"] == "vocab":
+                corpus_rows = select_vocab_rows(conn, spec["rank_from"], spec["rank_to"])
+            else:
+                corpus_rows = select_vocab_rows_by_lemmas(conn, spec["lemmas"])
             if not corpus_rows:
-                raise ValueError("no lemmas in that rank range")
+                raise ValueError("no matching lemmas in the corpus")
             prompt = (
                 "Corpus rows (the only source of truth):\n"
                 + json.dumps(corpus_rows, ensure_ascii=False, indent=1)
@@ -268,10 +335,15 @@ async def run_batch(spec: dict) -> dict:
             )
             raw, gen_meta = await ai.ask(ai.GENERATOR_MODEL, VOCAB_SYSTEM, prompt)
             candidates = build_vocab_candidates(conn, ai.extract_json(raw), corpus_rows)
-        elif spec["kind"] == "parsing":
-            corpus_rows = select_parsing_rows(
-                conn, spec["book"], spec["chapter"], spec["parse_like"]
-            )
+        elif spec["kind"] in ("parsing", "parsing_filtered"):
+            if spec["kind"] == "parsing":
+                corpus_rows = select_parsing_rows(
+                    conn, spec["book"], spec["chapter"], spec["parse_like"]
+                )
+            else:
+                corpus_rows = select_parsing_rows_filtered(
+                    conn, spec["parse_like"], spec["lemma_in"]
+                )
             if not corpus_rows:
                 raise ValueError("no tokens match that construction")
             max_cards = int(spec.get("max_cards", 25))

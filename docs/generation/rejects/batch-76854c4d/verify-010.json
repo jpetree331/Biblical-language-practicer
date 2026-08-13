@@ -1,0 +1,17 @@
+{
+  "stage": "verify",
+  "reason": "'(yet not)' pulls the negation from the separate οὐ into the verb card, risking teaching that βλέπουσιν itself is negative.",
+  "candidate": {
+    "card_type": "parsing",
+    "payload": {
+      "surface": "βλέπουσιν",
+      "ref": "Matt.13.13",
+      "lemma": "βλέπω",
+      "parse": "V- 3PAI-P--",
+      "gloss": "they see (yet not)"
+    },
+    "citations": [
+      7175
+    ]
+  }
+}

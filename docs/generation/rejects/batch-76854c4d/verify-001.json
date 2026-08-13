@@ -1,0 +1,17 @@
+{
+  "stage": "verify",
+  "reason": "Gloss imports the meaning of a separate word: 'need' renders χρείαν (Matt 3:14), not ἔχω, which alone means 'I have'.",
+  "candidate": {
+    "card_type": "parsing",
+    "payload": {
+      "surface": "ἔχω",
+      "ref": "Matt.3.14",
+      "lemma": "ἔχω",
+      "parse": "V- 1PAI-S--",
+      "gloss": "I have need"
+    },
+    "citations": [
+      1155
+    ]
+  }
+}
