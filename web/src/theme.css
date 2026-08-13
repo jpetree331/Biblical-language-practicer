@@ -275,3 +275,27 @@ input:focus, textarea:focus, select:focus {
 .stat strong { color: var(--ink); font-size: var(--text-md); }
 .stat .stat-due { color: var(--status-due); }
 .newperday { width: 64px; padding: 2px var(--sp-2); }
+
+/* ---- topics & verse ---- */
+
+.topic-group { margin-bottom: var(--sp-6); }
+.topic-head {
+  font-family: var(--font-ui);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: var(--sp-1);
+  margin-bottom: var(--sp-3);
+}
+.verse-ref {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-3);
+}
+.verse-hint { letter-spacing: 0.1em; }

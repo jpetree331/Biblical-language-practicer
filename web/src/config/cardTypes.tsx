@@ -6,7 +6,10 @@
 import type { ReactNode } from 'react'
 import { clozeSplit, normalizeDeletions, parseClozeMarkup, toClozeMarkup } from '../lib/clozeSplit'
 import type { Deletion } from '../lib/clozeSplit'
+import { firstLetters } from '../lib/firstLetters'
 import { safePayload } from '../lib/sanitize'
+
+export type ReviewCtx = { reps: number }
 
 export type FieldSpec = {
   name: string
@@ -29,10 +32,10 @@ export type CardTypeSpec = {
   sanitize: (raw: unknown) => Record<string, unknown>
   /** One reviewable unit per variant (cloze: one per deletion). */
   variantCount: (payload: Record<string, unknown>) => number
-  /** Question side. */
-  renderFront: (payload: Record<string, unknown>, variant: number) => ReactNode
+  /** Question side. ctx carries review history (verse graduates on reps). */
+  renderFront: (payload: Record<string, unknown>, variant: number, ctx?: ReviewCtx) => ReactNode
   /** Answer side. */
-  renderBack: (payload: Record<string, unknown>, variant: number) => ReactNode
+  renderBack: (payload: Record<string, unknown>, variant: number, ctx?: ReviewCtx) => ReactNode
   /** One-line summary for card lists. */
   summarize: (payload: Record<string, unknown>) => string
 }
@@ -164,7 +167,94 @@ const cloze: CardTypeSpec = {
   },
 }
 
-export const CARD_TYPES: Record<string, CardTypeSpec> = { basic, cloze }
+type VersePayload = {
+  reference: string
+  translation: string
+  text: string
+  graduateAfter: number
+}
+
+const verse: CardTypeSpec = {
+  key: 'verse',
+  label: 'Verse memory',
+  fields: [
+    { name: 'reference', label: 'Reference', kind: 'text', required: true, placeholder: 'John 1:1' },
+    { name: 'translation', label: 'Translation', kind: 'text', placeholder: 'KJV' },
+    { name: 'text', label: 'Verse text', kind: 'textarea', required: true },
+    {
+      name: 'graduateAfter',
+      label: 'Graduate after N good reviews',
+      kind: 'text',
+      placeholder: '6',
+      help: 'Until then the front shows first-letter hints; after, you recite from the reference alone.',
+    },
+  ],
+  fromFields(values) {
+    const reference = (values.reference ?? '').trim()
+    const text = (values.text ?? '').trim()
+    if (!reference) throw new Error('Reference is required')
+    if (!text) throw new Error('Verse text is required')
+    const graduateAfter = values.graduateAfter?.trim()
+      ? Number.parseInt(values.graduateAfter, 10)
+      : 6
+    if (!Number.isInteger(graduateAfter) || graduateAfter < 0)
+      throw new Error('Graduate after must be a whole number')
+    const payload: Record<string, unknown> = { reference, text, graduateAfter }
+    const translation = (values.translation ?? '').trim()
+    if (translation) payload.translation = translation
+    return payload
+  },
+  toFields(payload) {
+    const p = this.sanitize(payload) as VersePayload
+    return {
+      reference: p.reference,
+      translation: p.translation,
+      text: p.text,
+      graduateAfter: String(p.graduateAfter),
+    }
+  },
+  sanitize(raw) {
+    return safePayload<VersePayload>(
+      {
+        defaults: {
+          reference: '(missing reference)',
+          translation: '',
+          text: '(missing text)',
+          graduateAfter: 6,
+        },
+      },
+      raw,
+    )
+  },
+  variantCount: () => 1,
+  renderFront(payload, _variant, ctx) {
+    const p = this.sanitize(payload) as VersePayload
+    const graduated = (ctx?.reps ?? 0) >= p.graduateAfter
+    return (
+      <div>
+        <div className="verse-ref">
+          {p.reference}
+          {p.translation ? <span className="tag tag-quiet">{p.translation}</span> : null}
+        </div>
+        {graduated ? (
+          <div className="muted">recite from memory</div>
+        ) : (
+          <div className="card-face-text verse-hint">{firstLetters(p.text)}</div>
+        )}
+      </div>
+    )
+  },
+  renderBack(payload) {
+    const p = this.sanitize(payload) as VersePayload
+    return <div className="card-face-text">{p.text}</div>
+  },
+  summarize(payload) {
+    const p = this.sanitize(payload) as VersePayload
+    return `${p.reference} — ${p.text.length > 40 ? p.text.slice(0, 40) + '…' : p.text}`
+  },
+}
+
+export const CARD_TYPES: Record<string, CardTypeSpec> = { basic, cloze, verse }
 
 /** Lookup that never returns undefined — unknown types degrade to a basic
  *  card whose payload sanitizes to placeholders (corrupt rows must not crash). */

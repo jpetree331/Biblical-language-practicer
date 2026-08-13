@@ -7,12 +7,14 @@ export type Route =
   | { page: 'decks' }
   | { page: 'deck'; id: string }
   | { page: 'review'; id: string }
+  | { page: 'import' }
   | { page: 'about' }
 
 export function parseHash(hash: string): Route {
   const parts = hash.replace(/^#\/?/, '').split('/').filter(Boolean)
   if (parts[0] === 'deck' && parts[1]) return { page: 'deck', id: parts[1] }
   if (parts[0] === 'review' && parts[1]) return { page: 'review', id: parts[1] }
+  if (parts[0] === 'import') return { page: 'import' }
   if (parts[0] === 'about') return { page: 'about' }
   return { page: 'decks' }
 }

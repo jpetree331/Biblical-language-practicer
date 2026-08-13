@@ -3,7 +3,17 @@ import { api } from '../api'
 import type { Card, Deck } from '../api'
 import { CardEditor } from '../components/CardEditor'
 import { cardType } from '../config/cardTypes'
+import { toCsvRow } from '../lib/csv'
 import { navigate } from '../hooks/useHashRoute'
+
+function download(filename: string, mime: string, content: string) {
+  const url = URL.createObjectURL(new Blob([content], { type: mime }))
+  const a = document.createElement('a')
+  a.href = url
+  a.download = filename
+  a.click()
+  URL.revokeObjectURL(url)
+}
 
 type Stats = { due: number; new: number; retention: number | null }
 
@@ -52,6 +62,25 @@ export function DeckPage({ deckId }: { deckId: string }) {
     load()
   }
 
+  const exportJson = async () => {
+    const doc = await api.get<Record<string, unknown>>(`/api/decks/${deckId}/export`)
+    download(`${deck?.name ?? 'deck'}.json`, 'application/json', JSON.stringify(doc, null, 2))
+  }
+
+  const exportCsv = () => {
+    const basics = cards.filter((c) => c.card_type === 'basic')
+    const rows = [toCsvRow(['front', 'back', 'hint'])].concat(
+      basics.map((c) =>
+        toCsvRow([
+          String(c.payload.front ?? ''),
+          String(c.payload.back ?? ''),
+          String(c.payload.hint ?? ''),
+        ]),
+      ),
+    )
+    download(`${deck?.name ?? 'deck'}.csv`, 'text/csv', rows.join('\n'))
+  }
+
   const deleteDeck = async () => {
     if (!confirm(`Delete deck "${deck?.name}" and stop reviewing its cards?`)) return
     await api.delete(`/api/decks/${deckId}`)
@@ -90,6 +119,10 @@ export function DeckPage({ deckId }: { deckId: string }) {
             Rename
           </button>
           <button onClick={deleteDeck}>Delete deck</button>
+          <button onClick={() => void exportJson()}>Export</button>
+          {cards.some((c) => c.card_type === 'basic') && (
+            <button onClick={exportCsv}>CSV</button>
+          )}
           <button onClick={() => setAdding(true)}>Add card</button>
           <button className="primary" onClick={() => navigate(`/review/${deckId}`)}>
             Review

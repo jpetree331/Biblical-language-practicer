@@ -108,6 +108,7 @@ export function ReviewPage({ deckId }: { deckId: string }) {
 
   const spec = cardType(current.card_type)
   const variant = current.reps % spec.variantCount(current.payload)
+  const ctx = { reps: current.reps }
 
   return (
     <div className="review-shell">
@@ -116,11 +117,11 @@ export function ReviewPage({ deckId }: { deckId: string }) {
         {current.state === 'new' ? ' · new card' : ''}
       </p>
       <div className="card-surface review-card">
-        <div className="review-face">{spec.renderFront(current.payload, variant)}</div>
+        <div className="review-face">{spec.renderFront(current.payload, variant, ctx)}</div>
         {revealed && (
           <>
             <hr className="review-divider" />
-            <div className="review-face">{spec.renderBack(current.payload, variant)}</div>
+            <div className="review-face">{spec.renderBack(current.payload, variant, ctx)}</div>
           </>
         )}
       </div>

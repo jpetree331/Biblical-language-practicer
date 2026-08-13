@@ -65,17 +65,27 @@ export function DecksPage() {
       {decks.length === 0 && !creating ? (
         <p className="muted">No decks yet — make your first one.</p>
       ) : (
-        <div className="deck-grid">
-          {decks.map((d) => (
-            <button key={d.id} className="deck-tile" onClick={() => navigate(`/deck/${d.id}`)}>
-              <span className="deck-tile-name">{d.name}</span>
-              <span className="tag">{d.topic}</span>
-              <span className="muted">
-                {d.card_count} card{d.card_count === 1 ? '' : 's'}
-              </span>
-            </button>
-          ))}
-        </div>
+        [...new Set(decks.map((d) => d.topic))].sort().map((topic) => (
+          <section key={topic} className="topic-group">
+            <h2 className="topic-head">{topic}</h2>
+            <div className="deck-grid">
+              {decks
+                .filter((d) => d.topic === topic)
+                .map((d) => (
+                  <button
+                    key={d.id}
+                    className="deck-tile"
+                    onClick={() => navigate(`/deck/${d.id}`)}
+                  >
+                    <span className="deck-tile-name">{d.name}</span>
+                    <span className="muted">
+                      {d.card_count} card{d.card_count === 1 ? '' : 's'}
+                    </span>
+                  </button>
+                ))}
+            </div>
+          </section>
+        ))
       )}
     </div>
   )

@@ -45,6 +45,20 @@ REGISTRY: dict[str, dict[str, Any]] = {
         },
         "check": None,
     },
+    "verse": {
+        "schema": {
+            "type": "object",
+            "properties": {
+                "reference": {"type": "string", "minLength": 1},
+                "translation": {"type": "string"},
+                "text": {"type": "string", "minLength": 1},
+                "graduateAfter": {"type": "integer", "minimum": 0},
+            },
+            "required": ["reference", "text"],
+            "additionalProperties": False,
+        },
+        "check": None,
+    },
     "cloze": {
         "schema": {
             "type": "object",
