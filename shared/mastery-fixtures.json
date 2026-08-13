@@ -1,0 +1,79 @@
+{
+  "comment": "Shared fixtures for the mastery model — service/app/mastery.py and web/src/lib/mastery.ts must both produce exactly these outputs (Sprint 7 single-source-of-truth contract).",
+  "apply_review": [
+    { "args": { "score": 0.0, "rating": 3 }, "expected": 0.08 },
+    { "args": { "score": 0.5, "rating": 3 }, "expected": 0.58 },
+    { "args": { "score": 0.5, "rating": 4 }, "expected": 0.62 },
+    { "args": { "score": 0.5, "rating": 2 }, "expected": 0.52 },
+    { "args": { "score": 0.5, "rating": 1 }, "expected": 0.35 },
+    { "args": { "score": 0.98, "rating": 4 }, "expected": 1.0 },
+    { "args": { "score": 0.05, "rating": 1 }, "expected": 0.0 },
+    { "args": { "score": 1.0, "rating": 3 }, "expected": 1.0 }
+  ],
+  "apply_decay": [
+    { "args": { "score": 0.8, "days": 0 }, "expected": 0.8 },
+    { "args": { "score": 0.8, "days": 90 }, "expected": 0.4 },
+    { "args": { "score": 1.0, "days": 45 }, "expected": 0.7071067811865476 },
+    { "args": { "score": 0.6, "days": 180 }, "expected": 0.15 },
+    { "args": { "score": 0.0, "days": 30 }, "expected": 0.0 }
+  ],
+  "lesson_mastered": [
+    {
+      "args": {
+        "deck_stats": [{ "all_review": true, "retention": 0.93 }],
+        "concept_scores": [0.85, 0.9],
+        "retention_threshold": 0.9,
+        "concept_threshold": 0.8
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "deck_stats": [{ "all_review": true, "retention": 0.85 }],
+        "concept_scores": [0.85, 0.9],
+        "retention_threshold": 0.9,
+        "concept_threshold": 0.8
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "deck_stats": [{ "all_review": false, "retention": 0.95 }],
+        "concept_scores": [0.85],
+        "retention_threshold": 0.9,
+        "concept_threshold": 0.8
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "deck_stats": [{ "all_review": true, "retention": 0.95 }],
+        "concept_scores": [0.85, 0.7],
+        "retention_threshold": 0.9,
+        "concept_threshold": 0.8
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "deck_stats": [],
+        "concept_scores": [],
+        "retention_threshold": 0.9,
+        "concept_threshold": 0.8
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "deck_stats": [
+          { "all_review": true, "retention": 0.91 },
+          { "all_review": true, "retention": 0.92 }
+        ],
+        "concept_scores": [],
+        "retention_threshold": 0.9,
+        "concept_threshold": 0.8
+      },
+      "expected": true
+    }
+  ]
+}

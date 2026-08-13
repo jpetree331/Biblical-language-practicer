@@ -127,7 +127,23 @@ REGISTRY["parsing"] = {
         "additionalProperties": False,
     },
     "check": None,
+    # registry hook (Rule 1/6): the scheduler calls this generically after a
+    # grade; the Greek-specific body lives in app/greek/.
+    "on_review": "app.greek.mastery_hooks:on_parsing_review",
 }
+
+
+def get_on_review_hook(card_type: str):
+    """Resolve a registry entry's on_review hook ('module:function' string) to
+    a callable, or None. Import is deferred so the core stays decoupled."""
+    entry = REGISTRY.get(card_type) or {}
+    spec = entry.get("on_review")
+    if not spec:
+        return None
+    import importlib
+
+    module_name, func_name = spec.split(":")
+    return getattr(importlib.import_module(module_name), func_name)
 
 
 def validate_payload(card_type: str, payload: Any) -> list[str]:

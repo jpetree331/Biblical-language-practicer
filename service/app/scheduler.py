@@ -14,7 +14,7 @@ from datetime import datetime, timezone
 from fsrs import Card as FsrsCard
 from fsrs import Rating, Scheduler, State
 
-from . import db
+from . import card_types, db
 
 # Default scheduler: desired retention 0.9, standard learning steps, fuzzing on.
 _scheduler = Scheduler()
@@ -129,7 +129,8 @@ def grade(conn, card_id: str, rating: int, now: datetime | None = None) -> dict:
     (single connection, single commit by the caller's router)."""
     row = conn.execute(
         """
-        select s.*, c.deleted_at from card_state s
+        select s.*, c.deleted_at, c.card_type, c.payload as card_payload
+        from card_state s
         join cards c on c.id = s.card_id
         where s.card_id = ?
         """,
@@ -173,6 +174,12 @@ def grade(conn, card_id: str, rating: int, now: datetime | None = None) -> dict:
         """,
         (str(uuid.uuid4()), card_id, rating, review_time.isoformat(), elapsed_days, scheduled_days),
     )
+    # registry on_review hook (e.g. parsing cards feed concept mastery) —
+    # resolved generically; the drill core never branches on card type
+    hook = card_types.get_on_review_hook(row["card_type"])
+    if hook is not None:
+        hook(conn, json.loads(row["card_payload"]), rating)
+
     return {
         "card_id": card_id,
         "state": _STATE_TO_TEXT[updated.state],

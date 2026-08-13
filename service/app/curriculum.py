@@ -85,10 +85,11 @@ def load_map(map_doc: dict) -> dict:
                 "select id from lessons where seq = ?", (ch["n"],)
             ).fetchone()
             if existing is None:
+                lesson_id = str(uuid.uuid4())
                 conn.execute(
                     "insert into lessons (id, seq, title, chapter_ref, status) values (?, ?, ?, ?, ?)",
                     (
-                        str(uuid.uuid4()),
+                        lesson_id,
                         ch["n"],
                         ch.get("title") or f"Lesson {ch['n']}",
                         ch.get("reading_ref"),
@@ -96,9 +97,26 @@ def load_map(map_doc: dict) -> dict:
                     ),
                 )
             else:
+                lesson_id = existing["id"]
                 conn.execute(
                     "update lessons set title = ?, chapter_ref = ? where seq = ?",
                     (ch.get("title") or f"Lesson {ch['n']}", ch.get("reading_ref"), ch["n"]),
+                )
+
+            # lesson items: read → drill(vocab) → drill(parsing) → translate →
+            # compose. Drill refs use a deckname: convention resolved at read
+            # time, so build-chapter can run before or after loading.
+            conn.execute("delete from lesson_items where lesson_id = ?", (lesson_id,))
+            items = [("read", ch.get("reading_ref") or f"chapter:{ch['n']}")]
+            if ch.get("vocab_lemmas"):
+                items.append(("drill", f"deckname:Greek ch.{ch['n']} vocab"))
+                items.append(("drill", f"deckname:Greek ch.{ch['n']} parsing"))
+            items.append(("translate", "pending"))
+            items.append(("compose", "pending"))
+            for seq, (kind, ref) in enumerate(items, start=1):
+                conn.execute(
+                    "insert into lesson_items (id, lesson_id, kind, ref, seq) values (?, ?, ?, ?, ?)",
+                    (str(uuid.uuid4()), lesson_id, kind, ref, seq),
                 )
         conn.commit()
         n_concepts = conn.execute("select count(*) as n from concepts").fetchone()["n"]

@@ -9,7 +9,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 
 from . import db
-from .routers import cards, corpus, decks, gen, review, transfer
+from .routers import cards, corpus, decks, gen, lessons, review, transfer
 
 VERSION = "0.1.0"
 
@@ -27,6 +27,7 @@ app.include_router(review.router)
 app.include_router(transfer.router)
 app.include_router(corpus.router)
 app.include_router(gen.router)
+app.include_router(lessons.router)
 
 
 @app.get("/api/health")

@@ -4,6 +4,8 @@ import { DeckPage } from './pages/DeckPage'
 import { DecksPage } from './pages/DecksPage'
 import { CorpusPage } from './pages/CorpusPage'
 import { ImportPage } from './pages/ImportPage'
+import { LessonPage } from './pages/LessonPage'
+import { LessonsPage } from './pages/LessonsPage'
 import { ReviewPage } from './pages/ReviewPage'
 
 export default function App() {
@@ -16,6 +18,7 @@ export default function App() {
           Scriptorium
         </a>
         <a href="#/decks">Decks</a>
+        <a href="#/lessons">Lessons</a>
         <a href="#/import">Import</a>
         <a href="#/corpus">Corpus</a>
         <a href="#/about">About</a>
@@ -26,6 +29,8 @@ export default function App() {
         {route.page === 'review' && <ReviewPage key={route.id} deckId={route.id} />}
         {route.page === 'import' && <ImportPage />}
         {route.page === 'corpus' && <CorpusPage />}
+        {route.page === 'lessons' && <LessonsPage />}
+        {route.page === 'lesson' && <LessonPage key={route.id} lessonId={route.id} />}
         {route.page === 'about' && <AboutPage />}
       </main>
     </>

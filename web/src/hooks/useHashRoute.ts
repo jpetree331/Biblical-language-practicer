@@ -9,6 +9,8 @@ export type Route =
   | { page: 'review'; id: string }
   | { page: 'import' }
   | { page: 'corpus' }
+  | { page: 'lessons' }
+  | { page: 'lesson'; id: string }
   | { page: 'about' }
 
 export function parseHash(hash: string): Route {
@@ -17,6 +19,8 @@ export function parseHash(hash: string): Route {
   if (parts[0] === 'review' && parts[1]) return { page: 'review', id: parts[1] }
   if (parts[0] === 'import') return { page: 'import' }
   if (parts[0] === 'corpus') return { page: 'corpus' }
+  if (parts[0] === 'lessons') return { page: 'lessons' }
+  if (parts[0] === 'lesson' && parts[1]) return { page: 'lesson', id: parts[1] }
   if (parts[0] === 'about') return { page: 'about' }
   return { page: 'decks' }
 }

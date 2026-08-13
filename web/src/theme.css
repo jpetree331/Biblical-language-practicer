@@ -314,6 +314,71 @@ input:focus, textarea:focus, select:focus {
 .greek-inline { font-family: var(--font-greek); font-size: 1.1rem; }
 .vocab-lemma { font-size: 2rem; margin-bottom: var(--sp-2); }
 
+/* ---- lessons ---- */
+
+.lesson-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--sp-2); }
+.lesson-main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  text-align: left;
+  padding: var(--sp-3) var(--sp-4);
+}
+.lesson-locked .lesson-main { opacity: 0.45; }
+.lesson-seq {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  min-width: 2ch;
+  color: var(--ink-faint);
+}
+.lesson-title { flex: 1; }
+.lesson-status {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.lesson-status-active { color: var(--accent); }
+.lesson-status-mastered { color: var(--status-good); }
+.lesson-status-locked { color: var(--ink-faint); }
+
+.item-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--sp-3); }
+.item-kind {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: var(--sp-2);
+}
+.reading-body {
+  white-space: pre-wrap;
+  font-family: var(--font-greek);
+  font-size: var(--text-md);
+  line-height: 1.7;
+  max-height: 420px;
+  overflow-y: auto;
+  background: var(--paper-inset);
+  border-radius: var(--radius);
+  padding: var(--sp-4);
+}
+.drill-line { display: flex; align-items: center; gap: var(--sp-4); flex-wrap: wrap; }
+
+.concept-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--sp-2); }
+.concept-list li { display: flex; align-items: center; gap: var(--sp-3); }
+.concept-list li > span:first-child { flex: 0 0 40%; }
+.concept-bar {
+  flex: 1;
+  height: 8px;
+  background: var(--paper-inset);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.concept-fill { display: block; height: 100%; background: var(--ink-faint); }
+.concept-fill.warm { background: var(--status-warm); }
+.concept-fill.good { background: var(--status-good); }
+
 .linklike {
   border: none;
   background: none;
