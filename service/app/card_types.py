@@ -85,6 +85,51 @@ REGISTRY: dict[str, dict[str, Any]] = {
 }
 
 
+REGISTRY["vocab_gk"] = {
+    "schema": {
+        "type": "object",
+        "properties": {
+            "lemma": {"type": "string", "minLength": 1},
+            "gloss": {"type": "string", "minLength": 1},
+            "rank": {"type": "integer", "minimum": 1},
+            "examples": {
+                "type": "array",
+                "maxItems": 3,
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "token_id": {"type": "integer"},
+                        "ref": {"type": "string"},
+                        "surface": {"type": "string"},
+                    },
+                    "required": ["token_id", "ref", "surface"],
+                    "additionalProperties": False,
+                },
+            },
+        },
+        "required": ["lemma", "gloss", "rank", "examples"],
+        "additionalProperties": False,
+    },
+    "check": None,
+}
+
+REGISTRY["parsing"] = {
+    "schema": {
+        "type": "object",
+        "properties": {
+            "surface": {"type": "string", "minLength": 1},
+            "ref": {"type": "string", "minLength": 1},
+            "lemma": {"type": "string", "minLength": 1},
+            "parse": {"type": "string", "minLength": 1},
+            "gloss": {"type": "string"},
+        },
+        "required": ["surface", "ref", "lemma", "parse"],
+        "additionalProperties": False,
+    },
+    "check": None,
+}
+
+
 def validate_payload(card_type: str, payload: Any) -> list[str]:
     """Return a list of human-readable problems; empty list = valid."""
     entry = REGISTRY.get(card_type)

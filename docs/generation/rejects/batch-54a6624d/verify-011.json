@@ -1,0 +1,17 @@
+{
+  "stage": "verify",
+  "reason": "Near-duplicate of index 3: same lemma, parse and gloss 'is', answer differs only by the context-conditioned enclitic accent (ἐστὶν vs ἐστιν) — unwinnable in English→Greek drill and teaches a spurious accent distinction.",
+  "candidate": {
+    "card_type": "parsing",
+    "payload": {
+      "surface": "ἐστιν",
+      "ref": "John.1.30",
+      "lemma": "εἰμί",
+      "parse": "V- 3PAI-S--",
+      "gloss": "is"
+    },
+    "citations": [
+      49490
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "stage": "validate",
+  "reason": "citation 99999999 does not resolve to a corpus token",
+  "candidate": {
+    "card_type": "vocab_gk",
+    "payload": {
+      "lemma": "λόγος",
+      "gloss": "word",
+      "rank": 12,
+      "examples": [
+        {
+          "token_id": 99999999,
+          "ref": "John.1.1",
+          "surface": "λόγος,"
+        }
+      ]
+    },
+    "citations": [
+      99999999
+    ]
+  }
+}

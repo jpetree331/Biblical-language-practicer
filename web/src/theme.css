@@ -312,6 +312,8 @@ input:focus, textarea:focus, select:focus {
 }
 .corpus-table td { border-bottom: 1px solid var(--line); padding: var(--sp-1) var(--sp-3) var(--sp-1) 0; }
 .greek-inline { font-family: var(--font-greek); font-size: 1.1rem; }
+.vocab-lemma { font-size: 2rem; margin-bottom: var(--sp-2); }
+
 .linklike {
   border: none;
   background: none;

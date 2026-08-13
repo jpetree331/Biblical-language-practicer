@@ -1,0 +1,22 @@
+{
+  "stage": "validate",
+  "reason": "citation 403 lemma mismatch: token has 'θεός', card claims 'λόγος'",
+  "candidate": {
+    "card_type": "vocab_gk",
+    "payload": {
+      "lemma": "λόγος",
+      "gloss": "word",
+      "rank": 12,
+      "examples": [
+        {
+          "token_id": 403,
+          "ref": "x",
+          "surface": "x"
+        }
+      ]
+    },
+    "citations": [
+      403
+    ]
+  }
+}

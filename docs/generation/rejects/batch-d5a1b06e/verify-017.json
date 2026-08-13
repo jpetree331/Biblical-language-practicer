@@ -1,0 +1,22 @@
+{
+  "stage": "verify",
+  "reason": "Gloss 'not' is identical to the οὐ card (index 10) and omits that μή negates non-indicative moods/prohibitions — teaches the two as interchangeable.",
+  "candidate": {
+    "card_type": "vocab_gk",
+    "payload": {
+      "lemma": "μή",
+      "gloss": "not",
+      "rank": 18,
+      "examples": [
+        {
+          "token_id": 310,
+          "ref": "Matt.1.19",
+          "surface": "μὴ"
+        }
+      ]
+    },
+    "citations": [
+      310
+    ]
+  }
+}

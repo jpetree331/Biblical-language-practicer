@@ -1,0 +1,17 @@
+{
+  "stage": "verify",
+  "reason": "ζητεῖτε; is 2nd PLURAL but glossed 'are you seeking?' with number unmarked — indistinguishable from the 2nd-sg pattern used at index 13 in the same verse, so the -εις/-ειτε contrast is untestable.",
+  "candidate": {
+    "card_type": "parsing",
+    "payload": {
+      "surface": "ζητεῖτε;",
+      "ref": "John.1.38",
+      "lemma": "ζητέω",
+      "parse": "V- 2PAI-P--",
+      "gloss": "are you seeking?"
+    },
+    "citations": [
+      49628
+    ]
+  }
+}
